@@ -4,12 +4,16 @@ automake
 libtool
 libboost-all-dev
 python-pip
+python3-pip
+npm
 git
 gitk
 meld
+
 neovim
 tmux
 qtile
+
 silversearcher-ag
 htop
 iftop
