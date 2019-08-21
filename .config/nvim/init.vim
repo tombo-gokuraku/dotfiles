@@ -40,7 +40,7 @@ set ignorecase
 set smartcase
 set wrapscan
 set incsearch
-set inccommand=split " 置換をインタラクティブにする
+set inccommand=split " 置換をインタラクティブにする insubstitude?とかいうのになったらしい?
 
 " クリップボード
 set clipboard+=unnamedplus
