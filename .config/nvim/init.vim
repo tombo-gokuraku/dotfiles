@@ -1,4 +1,12 @@
-" vim-plugが無かったら自動でダウンロードしてきて欲しい
+" vim-plugが無かったら自動でダウンロードしてくる
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" init.vimを編集したら自動で更新&PlugInstallしてほしい
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 " NERDTree
