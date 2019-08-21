@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 
 " カラースキーム
 Plug 'joshdick/onedark.vim' " Dark Theme
@@ -12,6 +13,21 @@ Plug 'itchyny/lightline.vim' " status line
 Plug 'ntpeters/vim-better-whitespace'
 
 " インデント可視化
+Plug 'Yggdroot/indentLine'
+
+" あいまい検索
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" ルートディレクトリを.gitのあるディレクトリに変更する
+Plug 'airblade/vim-rooter'
+
+" Git関連
+" Gitと連携する
+Plug 'tpope/vim-fugitive'
+
+" Git差分表示
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -57,6 +73,11 @@ vnoremap j gj
 vnoremap k gk
 
 " 無駄な空白のハイライトと保存時の削除
+" ntpeters/vim-better-whitespaceの設定
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+" Yes/Noで聞かれるやつを消したい
+
+" 反映されるまでの時間を早くする(for vim-gitgutter)
+set updatetime=100
 
