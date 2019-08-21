@@ -5,7 +5,19 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" init.vimを編集したら自動で更新&PlugInstallしてほしい
+" init.vimを編集したら自動でinit.vimをリロードして、PlugInstallしてほしい
+augroup reload_initvim
+    au!
+    au BufWritePost init.vim so $MYVIMRC | call LightlineReload() | silent PlugInstall
+augroup end
+
+" init.vimをっReloadするとLightlineが消えてしまうので、Lightlineをリロードする
+command! LightlineReload call LightlineReload()
+function! LightlineReload()
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -39,11 +51,13 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
-
 " color
 set termguicolors
 colorscheme onedark
 let g:lightline = {'colorscheme': 'onedark'}
+
+" 反映されるまでの時間を早くする(for vim-gitgutter)
+set updatetime=100
 
 " 行番号
 set number
@@ -58,7 +72,6 @@ set expandtab
 set smarttab
 set shiftround
 
-
 " 検索と置換
 set ignorecase
 set smartcase
@@ -70,8 +83,12 @@ set inccommand=split " 置換をインタラクティブにする
 set clipboard+=unnamedplus
 
 " キーバインド
-inoremap <silent> jj <Esc>:<C-u>w<CR> " jjでインサートモードから抜けると同時にファイルを保存する
+" jjでインサートモードから抜けると同時にファイルを保存する
+inoremap <silent> jj <Esc>:<C-u>w<CR>
+" C-eでNERDTreeをトグル
 map <C-e> :NERDTreeToggle<CR>
+" C-pでfzf.vimのHistoryを表示する
+nmap <C-p> :History<CR>
 
 " 移動
 " 行移動
@@ -85,7 +102,4 @@ vnoremap k gk
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 " Yes/Noで聞かれるやつを消したい
-
-" 反映されるまでの時間を早くする(for vim-gitgutter)
-set updatetime=100
 
