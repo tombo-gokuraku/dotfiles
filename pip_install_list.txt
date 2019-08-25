@@ -1,1 +1,4 @@
 pynvim
+jupyterlab
+python-dotenv
+selenium
