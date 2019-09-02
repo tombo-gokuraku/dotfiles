@@ -2,3 +2,7 @@ pynvim
 jupyterlab
 python-dotenv
 selenium
+scrapy
+flake8
+pylint
+black
