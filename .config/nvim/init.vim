@@ -49,6 +49,12 @@ Plug 'tpope/vim-fugitive'
 " Git差分表示
 Plug 'airblade/vim-gitgutter'
 
+" 多言語対応
+Plug 'sheerun/vim-polyglot'
+
+" Linter
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " color
@@ -89,6 +95,9 @@ inoremap <silent> jj <Esc>:<C-u>w<CR>
 map <C-e> :NERDTreeToggle<CR>
 " C-pでfzf.vimのHistoryを表示する
 nmap <C-p> :History<CR>
+"ALEKeyMap
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " 移動
 " 行移動
@@ -96,6 +105,12 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+" タブ移動
+nnoremap J gT
+nnoremap K gt
+" タブ自体の移動
+nnoremap <A-J> :tabmove-<CR>
+nnoremap <A-K> :tabmove+<CR>
 
 " 無駄な空白のハイライトと保存時の削除
 " ntpeters/vim-better-whitespaceの設定
@@ -103,3 +118,8 @@ let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 " Yes/Noで聞かれるやつを消したい
 
+" ALE Settings
+let g:ale_fixers = {
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'python': ['black'],
+  \ }
