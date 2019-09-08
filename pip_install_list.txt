@@ -6,3 +6,4 @@ scrapy
 flake8
 pylint
 black
+pysnooper
