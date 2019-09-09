@@ -10,6 +10,8 @@ python3-notebook
 jupyter
 jupyter-core
 python-ipykernel
+python-neovim
+python3-neovim
 
 git
 gitk
