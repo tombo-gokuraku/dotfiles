@@ -123,11 +123,19 @@ let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 " Yes/Noで聞かれるやつを消したい
 
+" ALE Linters
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let b:ale_linters = {
+    \ 'python': ['flake8'],
+    \ }
+let g:ale_lint_on_save = 1
+
 " ALE Settings
-let g:ale_fixers = {
+let b:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'python': ['black'],
   \ }
+
 let g:ale_fix_on_save = 1
 
 " ALE lightline Settings
