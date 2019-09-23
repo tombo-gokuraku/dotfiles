@@ -60,77 +60,26 @@ Plug 'maximbaz/lightline-ale'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" 入力補完
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
+" プラグインの設定
 " color
 set termguicolors
 colorscheme onedark
 let g:lightline = {'colorscheme': 'onedark'}
 
-" 反映されるまでの時間を早くする(for vim-gitgutter)
-set updatetime=100
-
-" 行番号
-set number
-set relativenumber
-
-" インデント
-set autoindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set smarttab
-set shiftround
-
-" 検索と置換
-set ignorecase
-set smartcase
-set wrapscan
-set incsearch
-set inccommand=split " 置換をインタラクティブにする insubstitude?とかいうのになったらしい?
-
-" クリップボード
-set clipboard+=unnamedplus
-
-" キーバインド
-" jjでインサートモードから抜けると同時にファイルを保存する
-inoremap <silent> jj <Esc>:<C-u>w<CR>
-" C-eでNERDTreeをトグル
-map <C-e> :NERDTreeToggle<CR>
-" C-pでfzf.vimのHistoryを表示する
-nmap <C-p> :History<CR>
-"ALEKeyMap
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" 移動
-" 行移動
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-" タブ移動
-nnoremap J gT
-nnoremap K gt
-" タブ自体の移動
-nnoremap <A-J> :tabmove-<CR>
-nnoremap <A-K> :tabmove+<CR>
-
-" 無駄な空白のハイライトと保存時の削除
-" ntpeters/vim-better-whitespaceの設定
-let g:better_whitespace_enabled=1
-let g:strip_whitespace_on_save=1
-" Yes/Noで聞かれるやつを消したい
-
+" ALE Settings
 " ALE Linters
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_python_flake8_options = '--max-line-length 88'
 let b:ale_linters = {
     \ 'python': ['flake8'],
     \ }
 let g:ale_lint_on_save = 1
-
-" ALE Settings
+" ALE Fixers
 let b:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'python': ['black'],
@@ -162,3 +111,64 @@ let g:lightline.active = {
 
 " ultisnips settings
 let g:UltiSnipsExpandTrigger='<c-j>'
+
+" 無駄な空白のハイライトと保存時の削除
+" ntpeters/vim-better-whitespaceの設定
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+" Yes/Noで聞かれるやつを消したい
+
+" 反映されるまでの時間を早くする(for vim-gitgutter)
+set updatetime=100
+
+" NeoVim関連の設定
+" 行番号
+set number
+set relativenumber
+
+" インデント
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+set shiftround
+
+" 検索と置換
+set ignorecase
+set smartcase
+set wrapscan
+set incsearch
+set inccommand=split " 置換をインタラクティブにする insubstitude?とかいうのになったらしい?
+
+" クリップボード
+set clipboard+=unnamedplus
+
+" キーバインド
+" jjでインサートモードから抜けると同時にファイルを保存する
+inoremap <silent> jj <Esc>:<C-u>w<CR>
+" <ESC><ESC> で検索ハイライトをトグル
+nnoremap <ESC><ESC> :set hlsearch!<CR>
+" C-eでNERDTreeをトグル
+map <C-e> :NERDTreeToggle<CR>
+" C-pでHistoryを表示する
+nmap <C-p> :History<CR>
+"ALEKeyMap
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" 移動
+" 行移動
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+" タブ移動
+nnoremap J gT
+nnoremap K gt
+" タブ自体の移動
+nnoremap <A-J> :tabmove-<CR>
+nnoremap <A-K> :tabmove+<CR>
+" <Space> h lで行頭、行末に移動
+nnoremap <Space>h ^
+nnoremap <Space>l $
