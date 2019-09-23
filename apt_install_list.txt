@@ -14,8 +14,6 @@ python-ipykernel
 python-neovim
 python3-neovim
 
-npm
-
 git
 gitk
 meld
