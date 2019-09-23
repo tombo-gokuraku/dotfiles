@@ -1,3 +1,6 @@
+# neovim_python_environmental
+nvim_env/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
