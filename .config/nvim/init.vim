@@ -65,6 +65,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
+" Pythonパスの設定
+let g:python_host_prog  = $HOME . 'Env/python_env/nvim_env/bin/python'
+let g:python3_host_prog  = $HOME . 'Env/python_env/nvim_env/bin/python3'
+
 " プラグインの設定
 " color
 set termguicolors
