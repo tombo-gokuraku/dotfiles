@@ -176,3 +176,5 @@ nnoremap <A-K> :tabmove+<CR>
 " <Space> h lで行頭、行末に移動
 nnoremap <Space>h ^
 nnoremap <Space>l $
+vnoremap <Space>h ^
+vnoremap <Space>l $
