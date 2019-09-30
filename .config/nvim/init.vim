@@ -121,11 +121,45 @@ let g:UltiSnipsExpandTrigger='<c-j>'
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 " Yes/Noで聞かれるやつを消したい
+" "coc.nvim settings"
+" tab で補完候補選択 C-nのほうが好きなのでそのままにする
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
+" Enterで補完候補を決定する
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" ジャンプの設定
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Uでドキュメントの表示
+" なぜかホバー表示にならない
+nnoremap <silent> U :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
 
-" NeoVim関連の設定
+" "NeoVim関連の設定"
 " 行番号
 set number
 set relativenumber
