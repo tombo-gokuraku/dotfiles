@@ -63,8 +63,11 @@ Plug 'honza/vim-snippets'
 " 入力補完
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" 実行環境 REPL
+" Terminal & REPL
 Plug 'kassio/neoterm'
+
+" コメントアウト
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
