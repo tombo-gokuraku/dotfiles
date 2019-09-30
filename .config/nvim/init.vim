@@ -77,6 +77,8 @@ Plug 'tpope/vim-commentary'
 " Undo
 Plug 'mbbill/undotree'
 
+" カーソル移動
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
@@ -187,13 +189,21 @@ nnoremap <leader>tl :<c-u>exec v:count.'Tclear'<cr>
 " "undotree settings"
 nnoremap <F5> :UndotreeToggle<cr>
 
+" "vim-easymotion settings"
+" s{char}{char} to move to {char}{char}
+map <leader>s <Plug>(easymotion-bd-f2)
+nmap <leader>s <Plug>(easymotion-overwin-f2)
+" Move to line
+map <leader>l <Plug>(easymotion-bd-jk)
+nmap <leader>l <Plug>(easymotion-overwin-line)
+
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
 
 " "NeoVim関連の設定"
 " 行番号
 set number
-set relativenumber
+" set relativenumber
 
 " インデント
 set autoindent
