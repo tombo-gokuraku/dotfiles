@@ -63,13 +63,16 @@ Plug 'honza/vim-snippets'
 " 入力補完
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" 実行環境 REPL
+Plug 'kassio/neoterm'
+
 call plug#end()
 
 " Pythonパスの設定
 let g:python_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python'
 let g:python3_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python3'
 
-" プラグインの設定
+""" "プラグインの設定" """
 " "lightline settings"
 set termguicolors
 colorscheme onedark
@@ -77,11 +80,11 @@ let g:lightline = {'colorscheme': 'onedark'}
 
 " "ntpeters/vim-better-whitespaceの設定"
 " 無駄な空白のハイライトと保存時の削除
+" Yes/Noで聞かれるやつを消したい
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 
-" Yes/Noで聞かれるやつを消したい
-" ALE Settings
+" "ALE Settings"
 " ALE Linters
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_python_flake8_options = '--max-line-length 88'
@@ -156,6 +159,17 @@ function! s:show_documentation()
   endif
 endfunction
 
+" "neoterm settings"
+let g:neoterm_default_mod='belowright' "neotermの起動位置の設定
+let g:neoterm_size=10 "neotermのサイズの設定
+let g:neoterm_autoscroll=1 "autoscroll
+"<C-w>でターミナルの挿入モードを抜ける
+tnoremap <silent> <C-w> <C-\><C-n><C-w>
+" REPLの設定 C-xで実行
+nnoremap <C-x> :TREPLSendLine<CR>j0
+vnoremap <C-x> V:TREPLSendSelection<CR>'>j0
+" 3<leader>tl will clear neoterm-3.
+nnoremap <leader>tl :<c-u>exec v:count.'Tclear'<cr>
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
@@ -200,6 +214,8 @@ if system('uname -a | grep Microsoft') != ""
 endif
 
 " キーバインド
+" leader keyを,に変更
+" let mapleader = ","
 " jjでインサートモードから抜けると同時にファイルを保存する
 inoremap <silent> jj <Esc>:<C-u>w<CR>
 " <ESC><ESC> で検索ハイライトをトグル
