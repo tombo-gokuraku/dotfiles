@@ -101,9 +101,9 @@ let g:lightline = {'colorscheme': 'onedark'}
 
 " "ntpeters/vim-better-whitespaceの設定"
 " 無駄な空白のハイライトと保存時の削除
-" Yes/Noで聞かれるやつを消したい
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm = 0 "確認なしに空白行を削除する"
 
 " "ALE Settings"
 " ALE Linters
