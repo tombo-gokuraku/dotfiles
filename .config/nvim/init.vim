@@ -118,11 +118,9 @@ let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'python': ['black'],
   \ }
-
 let g:ale_fix_on_save = 1
 
-" ALE lightline Settings
-let g:lightline = {'colorscheme': 'onedark'}
+" "ALE lightline Settings"
 let g:lightline.component_expand = {
   \   'linter_checking': 'lightline#ale#checking',
   \   'linter_warnings': 'lightline#ale#warnings',
@@ -158,20 +156,16 @@ let g:UltiSnipsExpandTrigger='<c-j>'
 "   let col = col('.') - 1
 "   return !col || getline('.')[col - 1]  =~# '\s'
 " endfunction
-
 " Enterで補完候補を決定する
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 " ジャンプの設定
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
 " Uでドキュメントの表示
 " なぜかホバー表示にならない
 nnoremap <silent> U :call <SID>show_documentation()<CR>
-
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
