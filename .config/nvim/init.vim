@@ -106,6 +106,11 @@ let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm = 0 "確認なしに空白行を削除する"
 
 " "ALE Settings"
+" C-pでHistoryを表示する
+nmap <C-p> :History<CR>
+"ALEKeyMap
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ALE Linters
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_python_flake8_options = '--max-line-length 88'
@@ -198,6 +203,12 @@ nmap <leader>s <Plug>(easymotion-overwin-f2)
 map <leader>l <Plug>(easymotion-bd-jk)
 nmap <leader>l <Plug>(easymotion-overwin-line)
 
+" "NERDTree settings"
+" デフォルトで隠しファイルを表示する (Iでトグルできる)
+let g:NERDTreeShowHidden=1
+" C-eでNERDTreeをトグル
+map <C-e> :NERDTreeToggle<CR>
+
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
 
@@ -246,13 +257,6 @@ endif
 inoremap <silent> jj <Esc>:<C-u>w<CR>
 " <ESC><ESC> で検索ハイライトをトグル
 nnoremap <ESC><ESC> :set hlsearch!<CR>
-" C-eでNERDTreeをトグル
-map <C-e> :NERDTreeToggle<CR>
-" C-pでHistoryを表示する
-nmap <C-p> :History<CR>
-"ALEKeyMap
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " 移動
 " 行移動
 nnoremap j gj
