@@ -69,6 +69,10 @@ Plug 'kassio/neoterm'
 " コメントアウト
 Plug 'tpope/vim-commentary'
 
+" Undo
+Plug 'mbbill/undotree'
+
+
 call plug#end()
 
 " Pythonパスの設定
@@ -173,6 +177,9 @@ nnoremap <C-x> :TREPLSendLine<CR>j0
 vnoremap <C-x> V:TREPLSendSelection<CR>'>j0
 " 3<leader>tl will clear neoterm-3.
 nnoremap <leader>tl :<c-u>exec v:count.'Tclear'<cr>
+
+" "undotree settings"
+nnoremap <F5> :UndotreeToggle<cr>
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
