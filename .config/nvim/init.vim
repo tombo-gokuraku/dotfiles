@@ -84,6 +84,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
+" 自動で括弧を閉じる
+Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 " Pythonパスの設定
