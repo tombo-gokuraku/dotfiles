@@ -80,6 +80,10 @@ Plug 'mbbill/undotree'
 " カーソル移動
 Plug 'easymotion/vim-easymotion'
 
+" 囲み文字の編集
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
 call plug#end()
 
 " Pythonパスの設定
