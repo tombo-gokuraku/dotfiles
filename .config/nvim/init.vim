@@ -1,3 +1,8 @@
+" leader keyを,に変更
+let g:mapleader = ','
+" Release keymappings for plug-in.
+
+
 " vim-plugが無かったら自動でダウンロードしてくる
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -224,8 +229,7 @@ if system('uname -a | grep Microsoft') != ""
 endif
 
 " キーバインド
-" leader keyを,に変更
-" let mapleader = ","
+
 " jjでインサートモードから抜けると同時にファイルを保存する
 inoremap <silent> jj <Esc>:<C-u>w<CR>
 " <ESC><ESC> で検索ハイライトをトグル
@@ -250,7 +254,7 @@ nnoremap K gt
 nnoremap <A-J> :tabmove-<CR>
 nnoremap <A-K> :tabmove+<CR>
 " <Space> h lで行頭、行末に移動
-nnoremap <Space>h ^
-nnoremap <Space>l $
-vnoremap <Space>h ^
-vnoremap <Space>l $
+nnoremap <C-h> ^
+nnoremap <C-l> $
+vnoremap <C-h> ^
+vnoremap <C-l> $
