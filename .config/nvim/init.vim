@@ -70,11 +70,17 @@ let g:python_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python'
 let g:python3_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python3'
 
 " プラグインの設定
-" color
+" "lightline settings"
 set termguicolors
 colorscheme onedark
 let g:lightline = {'colorscheme': 'onedark'}
 
+" "ntpeters/vim-better-whitespaceの設定"
+" 無駄な空白のハイライトと保存時の削除
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+
+" Yes/Noで聞かれるやつを消したい
 " ALE Settings
 " ALE Linters
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
@@ -113,14 +119,9 @@ let g:lightline.active = {
   \   ]
   \ }
 
-" ultisnips settings
+" "ultisnips settings"
 let g:UltiSnipsExpandTrigger='<c-j>'
 
-" 無駄な空白のハイライトと保存時の削除
-" ntpeters/vim-better-whitespaceの設定
-let g:better_whitespace_enabled=1
-let g:strip_whitespace_on_save=1
-" Yes/Noで聞かれるやつを消したい
 " "coc.nvim settings"
 " tab で補完候補選択 C-nのほうが好きなのでそのままにする
 " inoremap <silent><expr> <TAB>
