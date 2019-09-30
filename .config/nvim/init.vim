@@ -178,8 +178,9 @@ let g:neoterm_autoscroll=1 "autoscroll
 "<C-w>でターミナルの挿入モードを抜ける
 tnoremap <silent> <C-w> <C-\><C-n><C-w>
 " REPLの設定 C-xで実行
-nnoremap <C-x> :TREPLSendLine<CR>j0
-vnoremap <C-x> V:TREPLSendSelection<CR>'>j0
+nnoremap <C-x> :TREPLSendLine<CR>
+vnoremap <C-x> V:TREPLSendSelection<CR>
+" nnoremap <C-S-x> :TREPLSendFile<CR> "Ctrl + Shiftを使ったキーマップはVimの仕様上できないらしい
 " 3<leader>tl will clear neoterm-3.
 nnoremap <leader>tl :<c-u>exec v:count.'Tclear'<cr>
 
