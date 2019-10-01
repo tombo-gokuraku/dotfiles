@@ -31,7 +31,6 @@ gimp
 inkscape
 vlc
 kazam
-peek
 
 clamav
 gufw
