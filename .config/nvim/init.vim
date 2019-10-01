@@ -279,4 +279,4 @@ vnoremap <C-l> $
 
 " javascriptでの設定
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
-filetype plugin on
+filetype plugin indent on
