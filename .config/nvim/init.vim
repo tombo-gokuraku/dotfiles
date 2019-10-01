@@ -276,3 +276,7 @@ nnoremap <C-h> ^
 nnoremap <C-l> $
 vnoremap <C-h> ^
 vnoremap <C-l> $
+
+" javascriptでの設定
+set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
+filetype plugin on
