@@ -10,7 +10,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" init.vimを編集したら自動でinit.vimをリロードして、PlugInstallしてほしい
+" init.vimを編集したら自動で"init.vimをリロードして、PlugInstallしてほしい
 augroup reload_initvim
     au!
     au BufWritePost init.vim so $MYVIMRC | call LightlineReload() | silent PlugInstall
@@ -235,26 +235,10 @@ set wrapscan
 set incsearch
 set inccommand=split " 置換をインタラクティブにする insubstitude?とかいうのになったらしい?
 
-" クリップボード
+" "クリップボード"
 set clipboard+=unnamedplus
-" WSL用のクリップボード設定
-if system('uname -a | grep Microsoft') != ""
-  let g:clipboard = {
-        \   'name': 'wslClipboard',
-        \   'copy': {
-        \      '+': 'win32yank.exe -i',
-        \      '*': 'win32yank.exe -i',
-        \    },
-        \   'paste': {
-        \      '+': 'win32yank.exe -o',
-        \      '*': 'win32yank.exe -o',
-        \   },
-        \   'cache_enabled': 1,
-        \ }
-endif
 
-" キーバインド
-
+" "キーバインド"
 " jjでインサートモードから抜けると同時にファイルを保存する
 inoremap <silent> jj <Esc>:<C-u>w<CR>
 " <ESC><ESC> で検索ハイライトをトグル
@@ -277,6 +261,28 @@ nnoremap <C-l> $
 vnoremap <C-h> ^
 vnoremap <C-l> $
 
-" javascriptでの設定
+" "javascriptでの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
 filetype plugin indent on
+
+" "WSL用の設定"
+" Linux DESKTOP-8MJMAB0 4.19.67-microsoft-standard #1 SMP Sun Aug 18 13:37:54 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+if system('uname -a | grep microsoft') != ""
+  let g:clipboard = {
+        \   'name': 'wslClipboard',
+        \   'copy': {
+        \      '+': 'win32yank.exe -i',
+        \      '*': 'win32yank.exe -i',
+        \    },
+        \   'paste': {
+        \      '+': 'win32yank.exe -o',
+        \      '*': 'win32yank.exe -o',
+        \   },
+        \   'cache_enabled': 1,
+        \ }
+  " set t_Co=256
+  set t_ut=""
+  " colorscheme onedark
+  " highlight Normal ctermbg=NONE
+  " highlight nonText ctermbg=NONE
+endif
