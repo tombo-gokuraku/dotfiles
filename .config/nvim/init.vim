@@ -217,6 +217,9 @@ map <C-e> :NERDTreeToggle<CR>
 set updatetime=100
 
 " "NeoVim関連の設定"
+" syntax
+syntax on
+
 " 行番号
 set number
 " set relativenumber
