@@ -3,20 +3,20 @@ let g:mapleader = ' '
 " Release keymappings for plug-in.
 nnoremap <Space> <Nop>
 
-" vim-plugが無かったら自動でダウンロードしてくる
+" vim-plugが無かったら自動でダウンロードする
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" init.vimを編集したら自動で"init.vimをリロードして、PlugInstallしてほしい
+" init.vimを編集したら自動で"init.vimをリロードして、PlugInstallする
 augroup reload_initvim
     au!
     au BufWritePost init.vim so $MYVIMRC | call LightlineReload() | silent PlugInstall
 augroup end
 
-" init.vimをっReloadするとLightlineが消えてしまうので、Lightlineをリロードする
+" init.vimをReloadするとLightlineが消えてしまうので、Lightlineをリロードする
 command! LightlineReload call LightlineReload()
 function! LightlineReload()
   call lightline#init()
@@ -24,6 +24,7 @@ function! LightlineReload()
   call lightline#update()
 endfunction
 
+" pluginをインストール
 call plug#begin('~/.local/share/nvim/plugged')
 
 " NERDTree
@@ -106,8 +107,6 @@ let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm = 0 "確認なしに空白行を削除する"
 
 " "ALE Settings"
-" C-pでHistoryを表示する
-nmap <C-p> :History<CR>
 "ALEKeyMap
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -244,7 +243,9 @@ set inccommand=split " 置換をインタラクティブにする insubstitude?�
 set clipboard+=unnamedplus
 
 " "キーバインド"
-" jjでインサートモードから抜けると同時にファイルを保存する
+" C-pでHistoryを表示する
+nmap <C-p> :History<CR>
+" jjでインサートモードから抜ける
 inoremap <silent> jj <Esc>
 " <ESC><ESC> で検索ハイライトをトグル
 nnoremap <ESC><ESC> :set hlsearch!<CR>
