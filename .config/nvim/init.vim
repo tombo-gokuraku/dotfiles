@@ -1,7 +1,7 @@
-" leader keyを,に変更
-let g:mapleader = ','
+" leader keyを設定
+let g:mapleader = ' '
 " Release keymappings for plug-in.
-nnoremap ,  <Nop>
+nnoremap <Space> <Nop>
 
 " vim-plugが無かったら自動でダウンロードしてくる
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -190,14 +190,14 @@ let g:neoterm_autoscroll=1 "autoscroll
 "<C-w>でターミナルの挿入モードを抜ける
 tnoremap <silent> <C-w> <C-\><C-n><C-w>
 " REPLの設定 C-xで実行
-nnoremap <C-x> :TREPLSendLine<CR>
-vnoremap <C-x> V:TREPLSendSelection<CR>
+nnoremap <leader>x :TREPLSendLine<CR>
+vnoremap <leader>x V:TREPLSendSelection<CR>
 " nnoremap <C-S-x> :TREPLSendFile<CR> "Ctrl + Shiftを使ったキーマップはVimの仕様上できないらしい
 " 3<leader>tl will clear neoterm-3.
 nnoremap <leader>tl :<c-u>exec v:count.'Tclear'<cr>
 
 " "undotree settings"
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <leader>u :UndotreeToggle<cr>
 
 " "vim-easymotion settings"
 " s{char}{char} to move to {char}{char}
@@ -211,7 +211,7 @@ nmap <leader>l <Plug>(easymotion-overwin-line)
 " デフォルトで隠しファイルを表示する (Iでトグルできる)
 let g:NERDTreeShowHidden=1
 " C-eでNERDTreeをトグル
-map <C-e> :NERDTreeToggle<CR>
+map <leader>e :NERDTreeToggle<CR>
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
@@ -245,9 +245,11 @@ set clipboard+=unnamedplus
 
 " "キーバインド"
 " jjでインサートモードから抜けると同時にファイルを保存する
-inoremap <silent> jj <Esc>:<C-u>w<CR>
+inoremap <silent> jj <Esc>
 " <ESC><ESC> で検索ハイライトをトグル
 nnoremap <ESC><ESC> :set hlsearch!<CR>
+" <leader>wで保存
+nnoremap <leader>w :w<CR>
 " 移動
 " 行移動
 nnoremap j gj
