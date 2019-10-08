@@ -188,7 +188,7 @@ let g:neoterm_size=10 "neotermのサイズの設定
 let g:neoterm_autoscroll=1 "autoscroll
 "<C-w>でターミナルの挿入モードを抜ける
 tnoremap <silent> <C-w> <C-\><C-n><C-w>
-" REPLの設定 C-xで実行
+" REPLの設定
 nnoremap <leader>x :TREPLSendLine<CR>
 vnoremap <leader>x V:TREPLSendSelection<CR>
 " nnoremap <C-S-x> :TREPLSendFile<CR> "Ctrl + Shiftを使ったキーマップはVimの仕様上できないらしい
@@ -239,10 +239,10 @@ set wrapscan
 set incsearch
 set inccommand=split " 置換をインタラクティブにする insubstitude?とかいうのになったらしい?
 
-" "クリップボード"
+" クリップボード
 set clipboard+=unnamedplus
 
-" "キーバインド"
+" キーバインド
 " C-pでHistoryを表示する
 nmap <C-p> :History<CR>
 " jjでインサートモードから抜ける
