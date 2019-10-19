@@ -191,7 +191,7 @@ tnoremap <silent> <C-w> <C-\><C-n><C-w>
 " REPLの設定
 nnoremap <leader>x :TREPLSendLine<CR>
 vnoremap <leader>x V:TREPLSendSelection<CR>
-" nnoremap <C-S-x> :TREPLSendFile<CR> "Ctrl + Shiftを使ったキーマップはVimの仕様上できないらしい
+nnoremap <leader><leader>x :TREPLSendFile<CR>
 " 3<leader>tl will clear neoterm-3.
 nnoremap <leader>tl :<c-u>exec v:count.'Tclear'<cr>
 
