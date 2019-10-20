@@ -239,6 +239,9 @@ set wrapscan
 set incsearch
 set inccommand=split " 置換をインタラクティブにする insubstitude?とかいうのになったらしい?
 
+" 全角文字で2文字分の幅を使用する
+set ambiwidth=double
+
 " クリップボード
 set clipboard+=unnamedplus
 
