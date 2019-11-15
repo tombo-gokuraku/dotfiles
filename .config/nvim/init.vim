@@ -89,7 +89,7 @@ Plug 'tpope/vim-repeat'
 Plug 'jiangmiao/auto-pairs'
 
 " use vim status line in tmux
-Plug 'edkolev/tmuxline.vim'
+" Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
@@ -214,6 +214,9 @@ nmap <leader>l <Plug>(easymotion-overwin-line)
 let g:NERDTreeShowHidden=1
 " C-eでNERDTreeをトグル
 map <leader>e :NERDTreeToggle<CR>
+
+" "tmuxline settings"
+" let g:tmuxline_preset = 'full'
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
