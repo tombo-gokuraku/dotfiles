@@ -294,3 +294,9 @@ set -g mode-keys vi
 
 # move status line to top
 #set -g status-position top
+
+# tpm settings
+if "test ! -d ~/.tmux/plugins/tpm" \
+   "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
+
+run '~/.tmux/plugins/tpm/tpm'
