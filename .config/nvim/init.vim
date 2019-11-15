@@ -88,6 +88,9 @@ Plug 'tpope/vim-repeat'
 " 自動で括弧を閉じる
 Plug 'jiangmiao/auto-pairs'
 
+" use vim status line in tmux
+Plug 'edkolev/tmuxline.vim'
+
 call plug#end()
 
 " Pythonパスの設定
