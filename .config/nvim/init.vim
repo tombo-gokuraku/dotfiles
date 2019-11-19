@@ -66,6 +66,9 @@ Plug 'maximbaz/lightline-ale'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" emmet-vin
+Plug 'mattn/emmet-vim'
+
 " 入力補完
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
