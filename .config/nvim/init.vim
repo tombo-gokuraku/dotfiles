@@ -278,8 +278,11 @@ nnoremap <C-l> $
 vnoremap <C-h> ^
 vnoremap <C-l> $
 
-" "javascriptでの設定"
+" "言語ごとの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
+set runtimepath+='~/.config/nvim/ftplugin/css.vim'
+set runtimepath+='~/.config/nvim/ftplugin/html.vim'
+set runtimepath+='~/.config/nvim/ftplugin/vue.vim'
 filetype plugin indent on
 
 " "WSL用の設定"
