@@ -26,6 +26,7 @@ silversearcher-ag
 htop
 iftop
 gnome-tweak-tool
+tree
 
 gimp
 inkscape
