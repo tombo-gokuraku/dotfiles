@@ -276,16 +276,16 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 " タブ移動
-nnoremap J gT
-nnoremap K gt
+nnoremap <c-h> gT
+nnoremap <c-l> gt
 " タブ自体の移動
 nnoremap <A-h> :tabmove-<CR>
 nnoremap <A-l> :tabmove+<CR>
-" <Space> h lで行頭、行末に移動
-nnoremap <C-h> ^
-nnoremap <C-l> $
-vnoremap <C-h> ^
-vnoremap <C-l> $
+" 行頭、行末に移動
+nnoremap H ^
+nnoremap L $
+vnoremap H ^
+vnoremap L $
 
 " "言語ごとの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
