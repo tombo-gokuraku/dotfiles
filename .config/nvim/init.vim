@@ -279,8 +279,8 @@ vnoremap k gk
 nnoremap J gT
 nnoremap K gt
 " タブ自体の移動
-nnoremap <A-J> :tabmove-<CR>
-nnoremap <A-K> :tabmove+<CR>
+nnoremap <A-h> :tabmove-<CR>
+nnoremap <A-l> :tabmove+<CR>
 " <Space> h lで行頭、行末に移動
 nnoremap <C-h> ^
 nnoremap <C-l> $
