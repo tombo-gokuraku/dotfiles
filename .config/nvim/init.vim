@@ -112,7 +112,7 @@ let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm = 0 "確認なしに空白行を削除する"
 
-" "fzf sxettings"
+" "fzf settings"
 " <leader>fでfzfを起動
 nnoremap <leader>f :FZF<CR>
 
