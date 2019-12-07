@@ -330,6 +330,10 @@ unbind C-b
 set -g prefix C-Space
 bind C-Space send-prefix
 
+# key bind settings
+bind-key -r M-h swap-window -t -1
+bind-key -r M-l swap-window -t +1
+
 # move status line to top
 #set -g status-position top
 
