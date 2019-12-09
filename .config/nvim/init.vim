@@ -115,6 +115,9 @@ let g:strip_whitespace_confirm = 0 "確認なしに空白行を削除する"
 " "fzf settings"
 " <leader>fでfzfを起動
 nnoremap <leader>f :FZF<CR>
+" <leader>gfでGFilesを起動
+nnoremap <leader>gf :GFiles<CR>
+
 
 " "ALE Settings"
 "ALEKeyMap
