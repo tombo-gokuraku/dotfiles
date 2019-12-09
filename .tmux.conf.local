@@ -345,6 +345,7 @@ if "test ! -d ~/.tmux/plugins/tpm" \
  set -g @tpm_plugins '          \
    tmux-plugins/tpm             \
    tmux-plugins/tmux-resurrect  \
+   tmux-plugins/tmux-continuum  \
  '
 
 ## settings of plugins
