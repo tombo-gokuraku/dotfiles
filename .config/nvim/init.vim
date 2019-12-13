@@ -3,6 +3,9 @@ let g:mapleader = ' '
 " Release keymappings for plug-in.
 nnoremap <Space> <Nop>
 
+" "vim-polyglot settings"
+let g:polyglot_disabled = ['md'] " ~/.vimrc, declare this variable before polyglot is loaded
+
 " vim-plugが無かったら自動でダウンロードする
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
@@ -94,13 +97,18 @@ Plug 'jiangmiao/auto-pairs'
 " use vim status line in tmux
 " Plug 'edkolev/tmuxline.vim'
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 call plug#end()
+
 
 " Pythonパスの設定
 let g:python_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python'
 let g:python3_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python3'
 
-""" "プラグインの設定" """
+""" "plugin settings" """
 " "lightline settings"
 set termguicolors
 colorscheme onedark
@@ -117,6 +125,7 @@ let g:strip_whitespace_confirm = 0 "確認なしに空白行を削除する"
 nnoremap <leader>f :FZF<CR>
 " <leader>gfでGFilesを起動
 nnoremap <leader>gf :GFiles<CR>
+
 
 
 " "ALE Settings"
@@ -229,6 +238,9 @@ map <leader>e :NERDTreeToggle<CR>
 
 " "tmuxline settings"
 " let g:tmuxline_preset = 'full'
+
+" "vim-markdown settings"
+let g:vim_markdown_conceal_code_blocks = 0 " markdownのコードブロックの``を隠さないように設定する
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
