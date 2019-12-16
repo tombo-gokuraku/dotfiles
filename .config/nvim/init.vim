@@ -275,6 +275,11 @@ set ambiwidth=double
 " クリップボード
 set clipboard+=unnamedplus
 
+" ファイル関連設定
+set confirm "終了時に未保存のファイルがある場合、警告する"
+set hidden "未保存のファイルがあっても別のファイルを開ける"
+set autoread "外部でファイルが変更されたら自動的にリロードする"
+
 " キーバインド
 " C-pでHistoryを表示する
 nmap <C-p> :History<CR>
