@@ -301,6 +301,8 @@ nnoremap H ^
 nnoremap L $
 vnoremap H ^
 vnoremap L $
+onoremap H ^
+onoremap L $
 
 " "言語ごとの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
