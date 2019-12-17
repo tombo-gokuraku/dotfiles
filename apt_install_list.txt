@@ -15,6 +15,7 @@ python-neovim
 python3-neovim
 
 git
+git-flow
 gitk
 meld
 
