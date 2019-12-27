@@ -79,7 +79,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kassio/neoterm'
 
 " コメントアウト
-Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-commentary'
+Plug 'tomtom/tcomment_vim'
 
 " Undo
 Plug 'mbbill/undotree'
