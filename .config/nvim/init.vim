@@ -3,6 +3,9 @@ let g:mapleader = ' '
 " Release keymappings for plug-in.
 nnoremap <Space> <Nop>
 
+" fileformatの設定
+setglobal fileformat=unix
+
 " "vim-polyglot settings"
 let g:polyglot_disabled = ['md'] " ~/.vimrc, declare this variable before polyglot is loaded
 
