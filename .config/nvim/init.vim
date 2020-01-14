@@ -244,7 +244,8 @@ map <leader>e :NERDTreeToggle<CR>
 " let g:tmuxline_preset = 'full'
 
 " "vim-markdown settings"
-let g:vim_markdown_conceal_code_blocks = 0 " markdownのコードブロックの``を隠さないように設定する
+let g:vim_markdown_conceal = 0 " 全てのconcealを無効化
+" let g:vim_markdown_conceal_code_blocks = 0 " markdownのコードブロックの``を隠さないように設定する
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
