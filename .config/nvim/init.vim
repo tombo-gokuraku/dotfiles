@@ -285,7 +285,7 @@ set confirm "終了時に未保存のファイルがある場合、警告する"
 set hidden "未保存のファイルがあっても別のファイルを開ける"
 set autoread "外部でファイルが変更されたら自動的にリロードする"
 
-" キーバインド
+" keymappings
 " C-pでHistoryを表示する
 nmap <C-p> :History<CR>
 " jjでインサートモードから抜ける
@@ -294,6 +294,8 @@ inoremap <silent> jj <Esc>
 nnoremap <ESC><ESC> :set hlsearch!<CR>
 " <leader>wで保存
 nnoremap <leader>w :w<CR>
+" <leader>rでvimrcをリロード
+nnoremap <leader>r :so $MYVIMRC<CR>
 " 移動
 " 行移動
 nnoremap j gj
