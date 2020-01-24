@@ -314,13 +314,14 @@ vnoremap L $
 onoremap H ^
 onoremap L $
 
-" "言語ごとの設定"
+" "ファイルごとの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
 set runtimepath+='~/.config/nvim/ftplugin/css.vim'
 set runtimepath+='~/.config/nvim/ftplugin/html.vim'
 set runtimepath+='~/.config/nvim/ftplugin/vue.vim'
 set runtimepath+='~/.config/nvim/ftplugin/csv.vim'
 set runtimepath+='~/.config/nvim/ftdetect/cloudformation.vim'
+autocmd BufWritePost *template.y*ml silent !cfn-format -w % 2>/dev/null " 保存時にCloudFormationのFormatterを実行
 filetype plugin indent on
 
 " "WSL用の設定"
