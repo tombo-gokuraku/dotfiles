@@ -2,3 +2,4 @@ neovim
 eslint
 prettier
 eslint-plugin-prettier
+browser-sync
