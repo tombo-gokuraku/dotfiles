@@ -1,5 +1,1 @@
 pynvim
-flake8
-pylint
-black
-jedi

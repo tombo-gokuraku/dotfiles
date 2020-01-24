@@ -6,6 +6,9 @@ scrapy
 flake8
 pylint
 black
+jedi
+wheel
+cfn-lint
 pysnooper
 pandas
 pprint

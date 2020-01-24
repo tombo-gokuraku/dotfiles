@@ -320,6 +320,7 @@ set runtimepath+='~/.config/nvim/ftplugin/css.vim'
 set runtimepath+='~/.config/nvim/ftplugin/html.vim'
 set runtimepath+='~/.config/nvim/ftplugin/vue.vim'
 set runtimepath+='~/.config/nvim/ftplugin/csv.vim'
+set runtimepath+='~/.config/nvim/ftdetect/cloudformation.vim'
 filetype plugin indent on
 
 " "WSL用の設定"
