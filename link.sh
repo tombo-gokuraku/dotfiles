@@ -10,3 +10,4 @@ ln -snfv ~/dotfiles/.config/nvim/ftdetect/cloudformation.vim ~/.config/nvim/ftde
 ln -snfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -snfv ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ln -snfv ~/dotfiles/.stylelintrc ~/.stylelintrc
+ln -snfv ~/dotfiles/.eslintrc ~/.eslintrc
