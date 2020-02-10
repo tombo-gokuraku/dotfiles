@@ -182,6 +182,9 @@ let g:lightline.active = {
 " "ultisnips settings"
 let g:UltiSnipsExpandTrigger='<c-j>'
 
+" "emmet-vim settings"
+let g:user_emmet_leader_key='<C-Z>' " emmet-vimのリーダーキーがCtrl+zになるはずだけどならない
+
 " "coc.nvim settings"
 " tab で補完候補選択 C-nのほうが好きなのでそのままにする
 " inoremap <silent><expr> <TAB>
