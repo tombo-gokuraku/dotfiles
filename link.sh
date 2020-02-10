@@ -9,3 +9,4 @@ ln -snfv ~/dotfiles/.config/nvim/ftplugin/csv.vim ~/.config/nvim/ftplugin/csv.vi
 ln -snfv ~/dotfiles/.config/nvim/ftdetect/cloudformation.vim ~/.config/nvim/ftdetect/cloudformation.vim
 ln -snfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -snfv ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
+ln -snfv ~/dotfiles/.stylelintrc ~/.stylelintrc

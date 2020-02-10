@@ -2,4 +2,7 @@ neovim
 eslint
 prettier
 eslint-plugin-prettier
+htmlhint
+stylelint
+stylelint-config-standard
 browser-sync

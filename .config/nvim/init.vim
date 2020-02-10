@@ -141,6 +141,8 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_python_flake8_options = '--max-line-length 88'
 let g:ale_linters = {
     \ 'python': ['flake8'],
+    \ 'html': ['htmlhint'],
+    \ 'css': ['stylelint'],
     \ 'javascript': ['eslint'],
     \ 'vue': ['eslint']
     \ }
@@ -150,7 +152,7 @@ let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'python': ['black'],
   \   'html': ['prettier'],
-  \   'css': ['prettier'],
+  \   'css': ['stylelint'],
   \   'javascript': ['prettier','eslint'],
   \   'vue': ['prettier','eslint'],
   \ }
