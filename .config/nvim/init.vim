@@ -183,7 +183,7 @@ let g:lightline.active = {
 let g:UltiSnipsExpandTrigger='<c-j>'
 
 " "emmet-vim settings"
-let g:user_emmet_leader_key='<C-Z>' " emmet-vimのリーダーキーがCtrl+zになるはずだけどならない
+let g:user_emmet_leader_key='<C-E>' " emmet-vimのリーダーキーがCtrl+zになるはずだけどならない → vimの再起動が必要、reloadだけでは反映されない
 
 " "coc.nvim settings"
 " tab で補完候補選択 C-nのほうが好きなのでそのままにする
