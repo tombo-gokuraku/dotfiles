@@ -7,6 +7,7 @@ ln -snfv ~/dotfiles/.config/nvim/ftplugin/html.vim ~/.config/nvim/ftplugin/html.
 ln -snfv ~/dotfiles/.config/nvim/ftplugin/vue.vim ~/.config/nvim/ftplugin/vue.vim
 ln -snfv ~/dotfiles/.config/nvim/ftplugin/csv.vim ~/.config/nvim/ftplugin/csv.vim
 ln -snfv ~/dotfiles/.config/nvim/ftdetect/cloudformation.vim ~/.config/nvim/ftdetect/cloudformation.vim
+ln -snfv ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 ln -snfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -snfv ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ln -snfv ~/dotfiles/.stylelintrc ~/.stylelintrc

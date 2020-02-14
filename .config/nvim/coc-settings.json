@@ -1,0 +1,6 @@
+{
+        "diagnostic.enable": false,
+        "python.linting.enabled": false,
+        "python.jediPath": "~/Env/python_env/nvim_env/lib/python3.7/site-packages/"
+}
+
