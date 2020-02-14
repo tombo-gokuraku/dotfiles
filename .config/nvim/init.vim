@@ -291,8 +291,8 @@ set hidden "未保存のファイルがあっても別のファイルを開け�
 set autoread "外部でファイルが変更されたら自動的にリロードする"
 
 " keymappings
-" C-pでHistoryを表示する
-nmap <C-p> :History<CR>
+" <leader>hでHistoryを表示する
+nmap <leader>h :History<CR>
 " jjでインサートモードから抜ける
 inoremap <silent> jj <Esc>
 " <ESC><ESC> で検索ハイライトをトグル
