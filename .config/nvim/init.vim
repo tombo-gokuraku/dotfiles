@@ -188,6 +188,18 @@ let g:UltiSnipsExpandTrigger='<c-j>'
 let g:user_emmet_leader_key='<C-E>' " emmet-vimのリーダーキーがCtrl+zになるはずだけどならない → vimの再起動が必要、reloadだけでは反映されない
 
 " "coc.nvim settings"
+" インストールする拡張機能
+let g:coc_global_extensions = [
+    \  'coc-lists'
+    \, 'coc-json'
+    \, 'coc-marketplace'
+    \, 'coc-html'
+    \, 'coc-css'
+    \, 'coc-tsserver'
+    \, 'coc-python'
+    \, 'coc-snippets'
+    \, 'coc-vetur'
+    \ ]
 " tab で補完候補選択 C-nのほうが好きなのでそのままにする
 " inoremap <silent><expr> <TAB>
 "       \ pumvisible() ? "\<C-n>" :
