@@ -26,7 +26,6 @@ sudo add-apt-repository ppa:hluk/copyq
 sudo apt update
 sudo apt install copyq
 ```
-Plays similar to a Trumpet
 ### debをダウンロードしてインストールするプログラムを入れる(Optional)
  - [ Chrome ](https://www.google.com/chrome/)
  - [ Discord ](https://discordapp.com/download)
