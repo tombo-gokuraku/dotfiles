@@ -45,6 +45,10 @@ lg --version
 #### OBS
 [ install-instructions ](https://obsproject.com/wiki/install-instructions#linux)のDebian-based Build Directionsを参考にインストールする
 
+### IMEの設定
+1. `./google_ime_keymap.txt`をインポートしてキーバインドの設定をする
+1. `./ime_dictionary`をインポートして辞書を設定する
+
 ## Usage
 
 ## Todo
