@@ -192,6 +192,7 @@ let g:user_emmet_leader_key='<C-E>' " emmet-vimのリーダーキーがCtrl+zに
 let g:coc_global_extensions = [
     \  'coc-lists'
     \, 'coc-json'
+    \, 'coc-yaml'
     \, 'coc-marketplace'
     \, 'coc-html'
     \, 'coc-css'
