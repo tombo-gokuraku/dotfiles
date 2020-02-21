@@ -33,6 +33,10 @@ endfunction
 " pluginをインストール
 call plug#begin('~/.local/share/nvim/plugged')
 
+" PCRE(perlの正規表現)を使えるようにする
+" Plug 'othree/eregex.vim'
+" regexのプレビューが効かなくなった。完全にPerlライクに書けるわけでもなかった
+
 " NERDTree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
