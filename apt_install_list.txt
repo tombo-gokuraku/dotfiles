@@ -34,7 +34,6 @@ tree
 gimp
 inkscape
 vlc
-kazam
 
 clamav
 gufw
