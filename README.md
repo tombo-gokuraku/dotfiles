@@ -49,8 +49,6 @@ lg --version
 1. `./google_ime_keymap.txt`をインポートしてキーバインドの設定をする
 1. `./ime_dictionary`をインポートして辞書を設定する
 
-## Usage
-
 ## Todo
 - 階層整理
   - リンクするdotfilesをsettingsディレクトリ内に格納
