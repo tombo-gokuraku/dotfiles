@@ -33,6 +33,7 @@ gnome-tweak-tool
 gnome-shell-pomodoro
 tree
 bat
+fd-find
 
 gimp
 inkscape
