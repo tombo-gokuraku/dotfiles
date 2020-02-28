@@ -110,7 +110,7 @@ tmux_conf_theme_mode_bg=$custom_red
 tmux_conf_theme_mode_attr='bold'
 
 # status line style
-tmux_conf_theme_status_fg=$custom_comment_grey
+tmux_conf_theme_status_fg=$custom_white
 tmux_conf_theme_status_bg=$custom_black
 # tmux_conf_theme_status_fg='#8a8a8a'                     # light gray
 # tmux_conf_theme_status_bg='#080808'                     # dark gray
@@ -134,7 +134,7 @@ tmux_conf_theme_terminal_title='#h ❐ #S ● #I #W'
 #     - #{hostname_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_window_status_fg=$custom_comment_grey
+tmux_conf_theme_window_status_fg=$custom_white
 tmux_conf_theme_window_status_bg=$custom_black
 # tmux_conf_theme_window_status_fg='#8a8a8a'              # light gray
 # tmux_conf_theme_window_status_bg='#080808'              # dark gray
@@ -223,7 +223,7 @@ tmux_conf_theme_status_left_bg=$custom_green','$custom_visual_grey','$custom_blu
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg=$custom_comment_grey','$custom_white','$custom_black
+tmux_conf_theme_status_right_fg=$custom_white','$custom_white','$custom_black
 tmux_conf_theme_status_right_bg=$custom_black','$custom_visual_grey','$custom_white
 # tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#000000' # light gray, white, black
 # tmux_conf_theme_status_right_bg='#080808,#d70000,#e4e4e4' # dark gray, red, white
