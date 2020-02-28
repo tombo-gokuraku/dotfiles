@@ -32,6 +32,7 @@ iftop
 gnome-tweak-tool
 gnome-shell-pomodoro
 tree
+bat
 
 gimp
 inkscape
