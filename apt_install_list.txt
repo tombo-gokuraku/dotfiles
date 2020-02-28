@@ -24,6 +24,7 @@ tmux
 qtile
 
 silversearcher-ag
+ripgrep
 htop
 iftop
 gnome-tweak-tool
