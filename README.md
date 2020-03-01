@@ -33,7 +33,7 @@ sudo apt install copyq
  - [ Steam ](https://store.steampowered.com/about/)
 ### binaryをインストールする
 aptで入らない、もしくは最新版を入れたいプログラム
-#### lazygit
+#### [ lazygit ](https://github.com/jesseduffield/lazygit)
 [ lazygit ]( https://github.com/jesseduffield/lazygit/releases )へアクセス
 ```
 wget https://github.com/jesseduffield/lazygit/releases/download/vxx.yy.zz/lazygit_xx.yy.zz_Linux_x86_64.tar.gz
@@ -42,7 +42,7 @@ sudo cp lazygit /usr/bin/
 lg --version
 ```
 
-#### OBS
+#### [ OBS ](https://github.com/obsproject/obs-studio)
 [ install-instructions ](https://obsproject.com/wiki/install-instructions#linux)のDebian-based Build Directionsを参考にインストールする
 
 ### IMEの設定
