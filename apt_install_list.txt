@@ -38,6 +38,7 @@ fd-find
 gimp
 inkscape
 vlc
+flameshot
 
 clamav
 gufw
