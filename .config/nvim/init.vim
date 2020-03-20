@@ -347,6 +347,8 @@ onoremap L $
 " "ファイルごとの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
 set runtimepath+='~/.config/nvim/ftplugin/css.vim'
+set runtimepath+='~/.config/nvim/ftplugin/scss.vim'
+set runtimepath+='~/.config/nvim/ftplugin/sass.vim'
 set runtimepath+='~/.config/nvim/ftplugin/html.vim'
 set runtimepath+='~/.config/nvim/ftplugin/vue.vim'
 set runtimepath+='~/.config/nvim/ftplugin/csv.vim'
