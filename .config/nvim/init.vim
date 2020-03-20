@@ -149,6 +149,8 @@ let g:ale_linters = {
     \ 'python': ['flake8'],
     \ 'html': ['htmlhint'],
     \ 'css': ['stylelint'],
+    \ 'scss': ['stylelint'],
+    \ 'sass': ['stylelint'],
     \ 'javascript': ['eslint'],
     \ 'vue': ['eslint']
     \ }
@@ -159,6 +161,8 @@ let g:ale_fixers = {
   \   'python': ['black'],
   \   'html': ['prettier'],
   \   'css': ['stylelint'],
+  \   'scss': ['stylelint'],
+  \   'sass': ['stylelint'],
   \   'javascript': ['prettier','eslint'],
   \   'vue': ['prettier','eslint'],
   \ }
