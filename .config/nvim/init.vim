@@ -72,6 +72,19 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 Plug 'maximbaz/lightline-ale'
 
+
+" vim-lsp関連
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+" Plug 'thomasfaingnaert/vim-lsp-snippets'
+" Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+
+" 入力補完
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 " Snippet
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -79,15 +92,12 @@ Plug 'honza/vim-snippets'
 " emmet-vin
 Plug 'mattn/emmet-vim'
 
-" 入力補完
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " Terminal & REPL
 Plug 'kassio/neoterm'
 
 " コメントアウト
-" Plug 'tpope/vim-commentary'
-Plug 'tomtom/tcomment_vim'
+" Plug 'tpope/vim-commentary' " コンテキストを解釈できない
+Plug 'tomtom/tcomment_vim' " コンテキストを解釈してコメントアウトしてくれる
 
 " Undo
 Plug 'mbbill/undotree'
@@ -237,6 +247,10 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" "asyncomplete settings"
+set completeopt+=preview "preview windowを表示する"
+
 
 " "neoterm settings"
 let g:neoterm_default_mod='belowright' "neotermの起動位置の設定
