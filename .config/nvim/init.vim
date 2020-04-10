@@ -85,6 +85,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+" highlight styled-components tag literals
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" semantic-highlight
+" styled-componentsにおけるtag literals内のプレースホルダー内のCSSに色をつけてくれるかなと思ったけど無理だった。
+" Plug 'jaxbot/semantic-highlight.vim'
+
+
 " Snippet
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -149,12 +157,19 @@ nnoremap <leader>gf :GFiles<CR>
 
 
 " "ALE Settings"
+" jsxのためのファイルタイプを追加
+augroup FiletypeGroup
+    autocmd!
+    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
+
 "ALEKeyMap
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ALE Linters
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_python_flake8_options = '--max-line-length 88'
+let g:ale_linter_aliases = {'jsx': ['css', 'javascript']} " jsx用のエイリアス
 let g:ale_linters = {
     \ 'python': ['flake8'],
     \ 'html': ['htmlhint'],
@@ -162,7 +177,8 @@ let g:ale_linters = {
     \ 'scss': ['stylelint'],
     \ 'sass': ['stylelint'],
     \ 'javascript': ['eslint'],
-    \ 'vue': ['eslint']
+    \ 'vue': ['eslint'],
+    \ 'jsx': ['stylelint', 'eslint']
     \ }
 let g:ale_lint_on_save = 1
 " ALE Fixers
@@ -215,6 +231,7 @@ let g:coc_global_extensions = [
     \, 'coc-html'
     \, 'coc-css'
     \, 'coc-tsserver'
+    \, 'coc-styled-components'
     \, 'coc-python'
     \, 'coc-snippets'
     \, 'coc-vetur'
@@ -250,6 +267,10 @@ endfunction
 
 " "asyncomplete settings"
 set completeopt+=preview "preview windowを表示する"
+
+" "semantic-highlight settings"
+" :nnoremap <leader><ESC> :SemanticHighlightToggle<cr>
+
 
 
 " "neoterm settings"
