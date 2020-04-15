@@ -2,5 +2,5 @@
     "diagnostic.enable": false,
     "python.linting.enabled": false,
     "python.jediPath": "~/Env/python_env/nvim_env/lib/python3.7/site-packages/",
-    "styled-components.tags": ["styled", "css", "sty", "xs", "sm", "md", "lg", "xl"]
+    "styled-components.tags": ["styled", "css", "sty", "createGlobalStyle", "xs", "sm", "md", "lg", "xl"]
 }
