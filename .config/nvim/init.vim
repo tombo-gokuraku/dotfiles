@@ -140,6 +140,14 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" HTML previewer
+Plug 'turbio/bracey.vim'
+" "Install"
+" cd ~/.local/share/nvim/plugged/bracey.vim
+" npm install --prefix server
+" "Usage"
+" :Bracey
+
 call plug#end()
 
 
