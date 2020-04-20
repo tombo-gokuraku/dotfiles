@@ -1,6 +1,7 @@
 build-essential
 cmake
 automake
+libclang-dev
 libtool
 libboost-all-dev
 
@@ -14,8 +15,6 @@ python-ipykernel
 python-neovim
 python3-neovim
 
-cargo
-
 git
 git-flow
 gitk
@@ -26,14 +25,11 @@ tmux
 qtile
 
 silversearcher-ag
-ripgrep
 htop
 iftop
 gnome-tweak-tool
 gnome-shell-pomodoro
 tree
-bat
-fd-find
 
 gimp
 inkscape

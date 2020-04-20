@@ -1,1 +1,4 @@
 exa
+ripgrep
+bat
+fd-find
