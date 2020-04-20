@@ -5,8 +5,9 @@ pip3 install --user -r pip_install_list.txt
 cat ./snap_install_list.txt  | xargs sudo snap install
 
 # install rustup & cargo
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-cat ./cargo_install_list.txt  | xargs cargo install -j4
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y #disable prompt
+# install cargo applications
+cat ./cargo_install_list.txt  | xargs $HOME/.cargo/bin/cargo install -j4 #初回インストール時はログアウトするまで`cargo`のパスが通らないので、直接指定する
 
 # install nvm & Node.js & npm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
