@@ -1,7 +1,13 @@
 #!/bin/bash
+
+# install apt applications
 sudo apt update && sudo apt upgrade -y
 cat ./apt_install_list.txt  | xargs sudo apt install -y
+
+# install pip applications
 pip3 install --user -r pip_install_list.txt
+
+# install snap applications
 cat ./snap_install_list.txt  | xargs sudo snap install
 
 # install rustup & cargo
@@ -15,6 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install --lts #install LTS version Node.js
+# install npm applications
 cat ./npm_install_list.txt  | xargs npm -g install
 
 # create nvim_env
