@@ -85,13 +85,26 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+" "highlight関連"
 " highlight styled-components tag literals
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+" highlight jsx
+" Plug 'maxmellon/vim-jsx-pretty' " vim-polyglotをインストールすれば自動的に入る
 
 " semantic-highlight
 " styled-componentsにおけるtag literals内のプレースホルダー内のCSSに色をつけてくれるかなと思ったけど無理だった。
 " Plug 'jaxbot/semantic-highlight.vim'
 
+
+" javascript syntax
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+" javascript向けsyntax file
+Plug 'othree/yajs.vim'
+" ecma script 関連のsyntax file
+Plug 'othree/es.next.syntax.vim'
+" JavaScriptライブラリ向けのsyntax file
+Plug 'othree/javascript-libraries-syntax.vim'
 
 " Snippet
 Plug 'SirVer/ultisnips'
@@ -189,7 +202,7 @@ let g:ale_fixers = {
   \   'css': ['stylelint'],
   \   'scss': ['stylelint'],
   \   'sass': ['stylelint'],
-  \   'javascript': ['prettier','eslint'],
+  \   'javascript': ['prettier', 'eslint'],
   \   'vue': ['prettier','eslint'],
   \ }
 let g:ale_fix_on_save = 1
@@ -271,6 +284,11 @@ set completeopt+=preview "preview windowを表示する"
 " "semantic-highlight settings"
 " :nnoremap <leader><ESC> :SemanticHighlightToggle<cr>
 
+" "javascript-libraries-syntax settings"
+let g:used_javascript_libs = 'react,vue'
+
+" "vim-javascript settings"
+let g:javascript_plugin_jsdoc = 1
 
 
 " "neoterm settings"
