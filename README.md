@@ -26,6 +26,21 @@ sudo add-apt-repository ppa:hluk/copyq
 sudo apt update
 sudo apt install copyq
 ```
+
+#### [ lazygit ](https://github.com/jesseduffield/lazygit)
+```
+sudo add-apt-repository ppa:lazygit-team/release
+sudo apt update
+sudo apt install lazygit
+```
+
+#### [ OBS ](https://github.com/obsproject/obs-studio)
+```
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install obs-studio
+```
+
 ### debをダウンロードしてインストールするプログラムを入れる(Optional)
  - [ Chrome ](https://www.google.com/chrome/)
  - [ Discord ](https://discordapp.com/download)
@@ -33,17 +48,12 @@ sudo apt install copyq
  - [ Steam ](https://store.steampowered.com/about/)
 ### binaryをインストールする
 aptで入らない、もしくは最新版を入れたいプログラム
-#### [ lazygit ](https://github.com/jesseduffield/lazygit)
-[ lazygit ]( https://github.com/jesseduffield/lazygit/releases )へアクセス
-```
-wget https://github.com/jesseduffield/lazygit/releases/download/vxx.yy.zz/lazygit_xx.yy.zz_Linux_x86_64.tar.gz
-targzx lazygit_xx.yy.zz_Linux_x86_64.tar.gz
-sudo cp lazygit /usr/bin/
-lg --version
-```
+#### ~~[ lazygit ](https://github.com/jesseduffield/lazygit)~~
+aptが頻繁に更新されるようになったため不要
 
-#### [ OBS ](https://github.com/obsproject/obs-studio)
-[ install-instructions ](https://obsproject.com/wiki/install-instructions#linux)のDebian-based Build Directionsを参考にインストールする
+#### ~~[ OBS ](https://github.com/obsproject/obs-studio)~~
+~~[ install-instructions ](https://obsproject.com/wiki/install-instructions#linux)のDebian-based Build Directionsを参考にインストールする~~
+aptが頻繁に更新されるようになったため不要
 
 ### IMEの設定
 1. `./google_ime_keymap.txt`をインポートしてキーバインドの設定をする
