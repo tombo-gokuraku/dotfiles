@@ -19,6 +19,7 @@ git
 git-flow
 gitk
 meld
+lazygit
 
 neovim
 tmux
@@ -35,6 +36,8 @@ gimp
 inkscape
 vlc
 flameshot
+copyq
+obs-studio
 
 clamav
 gufw

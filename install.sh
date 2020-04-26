@@ -1,6 +1,11 @@
 #!/bin/bash
 
 # install apt applications
+# ppaを追加する
+sudo add-apt-repository -y ppa:hluk/copyq
+sudo add-apt-repository -y ppa:lazygit-team/release
+sudo add-apt-repository -y ppa:obsproject/obs-studio
+# update & upgrade
 sudo apt update && sudo apt upgrade -y
 cat ./apt_install_list.txt  | xargs sudo apt install -y
 
