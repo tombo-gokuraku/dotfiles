@@ -5,14 +5,11 @@ libclang-dev
 libtool
 libboost-all-dev
 
-python-pip
 python3-pip
 python3-venv
 python3-notebook
 jupyter
 jupyter-core
-python-ipykernel
-python-neovim
 python3-neovim
 
 git
