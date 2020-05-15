@@ -14,4 +14,3 @@ ln -snfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -snfv ~/dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ln -snfv ~/dotfiles/.hyper.js ~/.hyper.js
 ln -snfv ~/dotfiles/.stylelintrc ~/.stylelintrc
-ln -snfv ~/dotfiles/.eslintrc ~/.eslintrc
