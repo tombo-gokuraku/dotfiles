@@ -238,6 +238,8 @@ let g:user_emmet_leader_key='<C-E>' " emmet-vimのリーダーキーがCtrl+zに
 " インストールする拡張機能
 let g:coc_global_extensions = [
     \  'coc-lists'
+    \, 'coc-word'
+    \, 'coc-emoji'
     \, 'coc-json'
     \, 'coc-yaml'
     \, 'coc-marketplace'
@@ -277,6 +279,21 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " "asyncomplete settings"
 set completeopt+=preview "preview windowを表示する"
