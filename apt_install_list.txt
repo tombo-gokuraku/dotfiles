@@ -23,6 +23,7 @@ tmux
 qtile
 
 silversearcher-ag
+sysstat
 htop
 iftop
 gnome-tweak-tool
