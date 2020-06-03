@@ -15,12 +15,10 @@ python3-neovim
 git
 git-flow
 gitk
-meld
 lazygit
 
 neovim
 tmux
-qtile
 
 silversearcher-ag
 sysstat
@@ -28,7 +26,10 @@ htop
 iftop
 gnome-tweak-tool
 gnome-shell-pomodoro
-tree
+meld
+xsel
+curl
+wget
 
 gimp
 inkscape
