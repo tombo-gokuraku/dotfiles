@@ -30,6 +30,12 @@ function! LightlineReload()
   call lightline#update()
 endfunction
 
+" .tmux.confを編集したら自動で.tmux.confをリロードする
+augroup reload_initvim
+    au!
+    au BufWritePost .tmux.conf silent !tmux source-file ~/.tmux.conf
+augroup end
+
 " pluginをインストール
 call plug#begin('~/.local/share/nvim/plugged')
 
