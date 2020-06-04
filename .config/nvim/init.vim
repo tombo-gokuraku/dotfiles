@@ -30,10 +30,10 @@ function! LightlineReload()
   call lightline#update()
 endfunction
 
-" .tmux.confを編集したら自動で.tmux.confをリロードする
-augroup reload_initvim
-    au!
-    au BufWritePost .tmux.conf silent !tmux source-file ~/.tmux.conf
+" .tmux.confを編集したら自動で.tmux.confをリロードする "&& tmux refresh-client}
+augroup reload_tmuxconf
+    autocmd!
+    au BufWritePost .tmux.conf :silent! !tmux source-file ~/.tmux.conf && tmux refresh-client
 augroup end
 
 " pluginをインストール
