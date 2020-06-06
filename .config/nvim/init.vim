@@ -161,7 +161,7 @@ let g:python3_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python3'
 set termguicolors
 colorscheme onedark
 function LightlineObsessionStatus()
-    return '%{ObsessionStatus()}'
+    return '%{ObsessionStatus("*", "obsession not started")}'
 endfunction
 let g:lightline = {'colorscheme': 'onedark'}
 let g:lightline.tabline = {
