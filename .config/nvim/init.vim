@@ -145,6 +145,7 @@ Plug 'jiangmiao/auto-pairs'
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 
 " vim session manager
 Plug 'tpope/vim-obsession'
@@ -360,6 +361,10 @@ map <leader>e :NERDTreeToggle<CR>
 " "vim-markdown settings"
 let g:vim_markdown_conceal = 0 " 全てのconcealを無効化
 let g:vim_markdown_conceal_code_blocks = 0 " markdownのコードブロックの``を隠さないように設定する
+
+" "markdown-preview.nvim settings"
+let g:mkdp_auto_start = 1 "Bufferに*.mdが開かれた瞬間にpreviewをスタートする
+let g:mkdp_echo_preview_url = 1 "preview pageを開いた時にURLをコマンドラインに表示する
 
 " "tpope/vim-obsession settings"
 " https://gist.github.com/robmiller/5135652
