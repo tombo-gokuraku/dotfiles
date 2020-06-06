@@ -16,7 +16,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" init.vimを編集したら自動で"init.vimをリロードして、PlugInstallする
+" init.vimを編集したら自動でinit.vimをリロードして、PlugInstallする
 augroup reload_initvim
     au!
     au BufWritePost init.vim so $MYVIMRC | call LightlineReload() | silent PlugInstall
@@ -146,6 +146,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" vim session manager
+Plug 'tpope/vim-obsession'
+
 call plug#end()
 
 
@@ -157,7 +160,34 @@ let g:python3_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python3'
 " "lightline settings"
 set termguicolors
 colorscheme onedark
+function LightlineObsessionStatus()
+    return '%{ObsessionStatus()}'
+endfunction
 let g:lightline = {'colorscheme': 'onedark'}
+let g:lightline.tabline = {
+    \ 'left': [ [ 'tabs' ] ],
+    \ 'right': [ [ 'obsession_status' ] ] }
+
+let g:lightline.component_expand = {
+  \   'linter_checking': 'lightline#ale#checking',
+  \   'linter_warnings': 'lightline#ale#warnings',
+  \   'linter_errors': 'lightline#ale#errors',
+  \   'linter_ok': 'lightline#ale#ok',
+  \   'obsession_status': 'LightlineObsessionStatus',
+  \ }
+let g:lightline.component_type = {
+  \   'linter_checking': 'left',
+  \   'linter_warnings': 'warning',
+  \   'linter_errors': 'error',
+  \   'linter_ok': 'left',
+  \ }
+let g:lightline.active = {
+  \   'left': [
+  \     ['mode', 'paste'],
+  \     ['readonly', 'filename', 'modified'],
+  \     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok'],
+  \   ]
+  \ }
 
 " "ntpeters/vim-better-whitespaceの設定"
 " 無駄な空白のハイライトと保存時の削除
@@ -213,26 +243,6 @@ let g:ale_fixers = {
   \ }
 let g:ale_fix_on_save = 1
 
-" "ALE lightline Settings"
-let g:lightline.component_expand = {
-  \   'linter_checking': 'lightline#ale#checking',
-  \   'linter_warnings': 'lightline#ale#warnings',
-  \   'linter_errors': 'lightline#ale#errors',
-  \   'linter_ok': 'lightline#ale#ok',
-  \ }
-let g:lightline.component_type = {
-  \   'linter_checking': 'left',
-  \   'linter_warnings': 'warning',
-  \   'linter_errors': 'error',
-  \   'linter_ok': 'left',
-  \ }
-let g:lightline.active = {
-  \   'left': [
-  \     ['mode', 'paste'],
-  \     ['readonly', 'filename', 'modified'],
-  \     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok'],
-  \   ]
-  \ }
 
 " "ultisnips settings"
 let g:UltiSnipsExpandTrigger='<c-j>'
@@ -350,6 +360,17 @@ map <leader>e :NERDTreeToggle<CR>
 " "vim-markdown settings"
 let g:vim_markdown_conceal = 0 " 全てのconcealを無効化
 let g:vim_markdown_conceal_code_blocks = 0 " markdownのコードブロックの``を隠さないように設定する
+
+" "tpope/vim-obsession settings"
+" https://gist.github.com/robmiller/5135652
+" Autoload sessions created by tpope's vim-obsession when starting Vim.
+augroup sourcesession
+  autocmd!
+  autocmd VimEnter * nested
+  \ if !argc() && empty(v:this_session) && filereadable('Session.vim') |
+  \   source Session.vim |
+  \ endif
+augroup END
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
