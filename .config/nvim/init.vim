@@ -357,8 +357,17 @@ let g:vim_markdown_conceal = 0 " 全てのconcealを無効化
 let g:vim_markdown_conceal_code_blocks = 0 " markdownのコードブロックの``を隠さないように設定する
 
 " "markdown-preview.nvim settings"
-let g:mkdp_auto_start = 1 "Bufferに*.mdが開かれた瞬間にpreviewをスタートする
-let g:mkdp_echo_preview_url = 1 "preview pageを開いた時にURLをコマンドラインに表示する
+" set to 1, nvim will open the preview window after entering the markdown buffer
+" default: 0
+let g:mkdp_auto_start = 0
+" set to 1, the MarkdownPreview command can be use for all files,
+" by default it can be use in markdown file
+" default: 0
+let g:mkdp_command_for_global = 0
+" set to 1, echo preview page url in command line when open preview page
+" default is 0
+let g:mkdp_echo_preview_url = 1
+map <leader>mp :MarkdownPreview<CR>
 
 " "tpope/vim-obsession settings"
 " https://gist.github.com/robmiller/5135652
