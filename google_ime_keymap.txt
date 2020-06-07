@@ -115,7 +115,6 @@ Composition	Shift Right	MoveCursorRight
 Conversion	Shift Right	SegmentWidthExpand
 DirectInput	Shift Space	IMEOn
 Precomposition	Shift Space	IMEOff
-Precomposition	Shift Space	IMEOff
 Composition	Shift Space	IMEOff
 Conversion	Shift Space	IMEOff
 Conversion	Shift Tab	ConvertPrev
