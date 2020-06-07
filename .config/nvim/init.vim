@@ -139,9 +139,6 @@ Plug 'tpope/vim-repeat'
 " 自動で括弧を閉じる
 Plug 'jiangmiao/auto-pairs'
 
-" use vim status line in tmux
-" Plug 'edkolev/tmuxline.vim'
-
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -354,9 +351,6 @@ nmap <leader>l <Plug>(easymotion-overwin-line)
 let g:NERDTreeShowHidden=1
 " C-eでNERDTreeをトグル
 map <leader>e :NERDTreeToggle<CR>
-
-" "tmuxline settings"
-" let g:tmuxline_preset = 'full'
 
 " "vim-markdown settings"
 let g:vim_markdown_conceal = 0 " 全てのconcealを無効化
