@@ -264,6 +264,8 @@ let g:coc_global_extensions = [
     \, 'coc-python'
     \, 'coc-snippets'
     \, 'coc-vetur'
+    \, 'coc-cmake'
+    \, 'coc-clangd'
     \ ]
 " tab で補完候補選択 C-nのほうが好きなのでそのままにする
 " inoremap <silent><expr> <TAB>
