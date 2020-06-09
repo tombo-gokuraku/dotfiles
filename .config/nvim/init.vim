@@ -381,6 +381,7 @@ augroup sourcesession
   \   source Session.vim |
   \ endif
 augroup END
+map <leader>os :Obsess<CR>
 
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
