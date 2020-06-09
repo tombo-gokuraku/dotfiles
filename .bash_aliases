@@ -8,6 +8,7 @@ alias e=exa
 alias ea='exa -a'
 alias ee='exa -aal'
 alias et='exa -T -L 3 -a -I "node_modules|.git|.cache"'
+alias eta='exa -T -a -I "node_modules|.git|.cache"'
 alias tm=tmux
 alias tma='tmux attach'
 alias bs='browser-sync start --server --files "*, ./**/*.css, ./**/*.js"'
