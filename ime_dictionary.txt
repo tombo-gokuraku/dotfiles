@@ -62,3 +62,7 @@ gらphql	GraphQL	名詞
 styぇd-こmぽねんts	styled-components	名詞	
 のこで	NoCode	名詞	
 のちおn	Notion	名詞	
+cら	CRA	名詞	
+cれあてーれあct-あっp	create-react-app	名詞	
+ねxt	Next	名詞	
+がtsby	Gatsby	名詞	
