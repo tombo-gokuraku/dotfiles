@@ -195,7 +195,7 @@ let g:strip_whitespace_confirm = 0 "確認なしに空白行を削除する"
 
 " "fzf settings"
 " デフォルトで隠しファイルを表示する
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --glob "!.git/*" --hidden --files --no-ignore-vcs'
 " <leader>fでfzfを起動
 nnoremap <leader>f :FZF<CR>
 " <leader>gfでGFilesを起動
