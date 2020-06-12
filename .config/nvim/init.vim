@@ -452,6 +452,9 @@ vnoremap L $
 onoremap H ^
 onoremap L $
 
+" comment outの自動挿入を無効
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " "ファイルごとの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
 set runtimepath+='~/.config/nvim/ftplugin/css.vim'
