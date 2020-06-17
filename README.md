@@ -1,20 +1,18 @@
 # tombo gokuraku dotfiles
 
 ## Install
-インストール手順
-
-### リポジトリをホームにクローンする
-```
+リポジトリをホームにクローンする
+```bash
 cd
 git clone https://github.com/tombo-gokuraku/dotfiles
 cd dotfiles
 ```
-### install.shを実行する
-```
+install.shを実行する
+```bash
 ./install.sh
 ```
-### link.shを実行する
-```
+link.shを実行する
+```bash
 ./link.sh
 ```
 
