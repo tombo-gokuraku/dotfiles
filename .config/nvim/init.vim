@@ -144,8 +144,11 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 
-" vim session manager
+" session manager
 Plug 'tpope/vim-obsession'
+
+
+Plug 'svermeulen/vim-cutlass'
 
 call plug#end()
 
