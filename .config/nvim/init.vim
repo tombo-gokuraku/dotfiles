@@ -419,9 +419,9 @@ map <leader>os :Obsess<CR>
 nmap <c-p> <plug>(YoinkPostPasteSwapBack)
 nmap <c-n> <plug>(YoinkPostPasteSwapForward)
 
-" 1行下にペースト
+" paste below
 nmap p <plug>(YoinkPaste_p)
-" 1行上にペースト
+" paste above
 nmap P <plug>(YoinkPaste_P)
 
 " show yank history
