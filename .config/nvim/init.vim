@@ -147,8 +147,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 " session manager
 Plug 'tpope/vim-obsession'
 
-
-Plug 'svermeulen/vim-cutlass'
+" advanced yank history
+Plug 'svermeulen/vim-yoink'
 
 call plug#end()
 
@@ -386,10 +386,38 @@ augroup sourcesession
 augroup END
 map <leader>os :Obsess<CR>
 
+" "vim-yoink settings"
+" cycle yank history
+nmap <c-p> <plug>(YoinkPostPasteSwapBack)
+nmap <c-n> <plug>(YoinkPostPasteSwapForward)
+
+" 1行下にペースト
+nmap p <plug>(YoinkPaste_p)
+" 1行上にペースト
+nmap P <plug>(YoinkPaste_P)
+
+" show yank history
+nmap <leader>yh :Yanks<CR>
+
+" delete operations such as x or d or s will also be added to the yank history.
+let g:yoinkIncludeDeleteOperations = 1
+
+" the yank history will be saved persistently across sessions of Vim. Note: Requires Neovim.
+let g:yoinkSavePersistently = 1
+set shada=!,'100,<50,s10,h
+
+" the cursor will always be placed at the end of the paste.
+let g:yoinkMoveCursorToEndOfPaste = 1
+
+" When set to 0, it will cycle back to the other end of the history so you can swap in the same direction forever.
+let g:yoinkSwapClampAtEnds = 1
+" 1週したかどうかが分かりづらいので0にするのは微妙
+
+" "NeoVim関連の設定"
+
 " 反映されるまでの時間を早くする(for vim-gitgutter)
 set updatetime=100
 
-" "NeoVim関連の設定"
 " syntax
 syntax on
 
