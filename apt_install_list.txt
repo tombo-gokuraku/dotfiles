@@ -30,6 +30,7 @@ meld
 xsel
 curl
 wget
+ncdu
 
 gimp
 inkscape
