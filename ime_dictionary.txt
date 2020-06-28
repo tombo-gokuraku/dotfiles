@@ -66,3 +66,5 @@ cら	CRA	名詞
 cれあてーれあct-あっp	create-react-app	名詞	
 ねxt	Next	名詞	
 がtsby	Gatsby	名詞	
+ぱcかげ	package.json	名詞	
+vsこで	VSCode	名詞	
