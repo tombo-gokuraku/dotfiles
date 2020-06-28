@@ -6,3 +6,4 @@ htmlhint
 stylelint
 stylelint-config-standard
 browser-sync
+npm-check-updates
