@@ -514,6 +514,9 @@ onoremap L $
 " comment outの自動挿入を無効
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" ROS launch fileをxmlとして読み込み
+au BufNewFile,BufRead *.launch setf xml
+
 " "ファイルごとの設定"
 set runtimepath+='~/.config/nvim/ftplugin/javascript.vim'
 set runtimepath+='~/.config/nvim/ftplugin/css.vim'
