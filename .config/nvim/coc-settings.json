@@ -1,20 +1,24 @@
 {
-    "diagnostic.enable": false,
-    "python.linting.enabled": false,
-    "python.jediPath": "~/Env/python_env/nvim_env/lib/python3.7/site-packages/",
-    "styled-components.tags": [
-      "styled",
-      "css",
-      "sty",
-      "createGlobalStyle",
-      "xs",
-      "sm",
-      "md",
-      "lg",
-      "xl"
-    ],
-    "tailwindCSS.headwind.classRegex": {
-      "javascript": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)|(?:\\btw\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])",
-      "javascriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)|(?:\\btw\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])"
-    }
+  "diagnostic.enable": false,
+  "python.linting.enabled": false,
+  "python.jediPath": "~/Env/python_env/nvim_env/lib/python3.7/site-packages/",
+  "styled-components.tags": [
+    "styled",
+    "css",
+    "sty",
+    "createGlobalStyle",
+    "xs",
+    "sm",
+    "md",
+    "lg",
+    "xl"
+  ],
+  "tailwindCSS.headwind.classRegex": {
+    "javascript": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)|(?:\\btw\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])",
+    "javascriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)|(?:\\btw\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])"
+  },
+  "json.format.enable": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json"
+  ]
 }
