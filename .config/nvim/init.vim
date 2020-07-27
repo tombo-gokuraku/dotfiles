@@ -454,7 +454,11 @@ syntax on
 
 " 行番号
 set number
-" set relativenumber
+set relativenumber
+
+" splitwindow
+set splitbelow
+set splitright
 
 " インデント
 set autoindent
@@ -547,6 +551,13 @@ vnoremap H ^
 vnoremap L $
 onoremap H ^
 onoremap L $
+" splitwindow関連
+nnoremap <c-w>_ <c-w>v
+nnoremap <c-w>- <c-w>s
+nmap <silent> <c-w>J :resize +2<CR>
+nmap <silent> <c-w>K :resize -2<CR>
+nmap <silent> <c-w>H :vertical resize +2<CR>
+nmap <silent> <c-w>L :vertical resize -2<CR>
 
 " comment outの自動挿入を無効
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
