@@ -476,6 +476,19 @@ set inccommand=split " 置換をインタラクティブにする insubstitude?�
 set ambiwidth=double
 
 " クリップボード
+" enable xsel
+let g:clipboard = {
+      \   'name': 'xsel_override',
+      \   'copy': {
+      \      '+': 'xsel --input --clipboard',
+      \      '*': 'xsel --input --primary',
+      \    },
+      \   'paste': {
+      \      '+': 'xsel --output --clipboard',
+      \      '*': 'xsel --output --primary',
+      \   },
+      \   'cache_enabled': 1,
+      \ }
 set clipboard+=unnamedplus
 
 " ファイル関連設定
