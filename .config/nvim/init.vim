@@ -489,6 +489,27 @@ let g:clipboard = {
       \   },
       \   'cache_enabled': 1,
       \ }
+" "WSL用の設定"
+" Linux DESKTOP-8MJMAB0 4.19.67-microsoft-standard #1 SMP Sun Aug 18 13:37:54 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+if system('uname -a | grep microsoft') != ""
+  let g:clipboard = {
+        \   'name': 'wslClipboard',
+        \   'copy': {
+        \      '+': 'win32yank.exe -i',
+        \      '*': 'win32yank.exe -i',
+        \    },
+        \   'paste': {
+        \      '+': 'win32yank.exe -o',
+        \      '*': 'win32yank.exe -o',
+        \   },
+        \   'cache_enabled': 1,
+        \ }
+  " set t_Co=256
+  set t_ut=""
+  " colorscheme onedark
+  " highlight Normal ctermbg=NONE
+  " highlight nonText ctermbg=NONE
+endif
 set clipboard+=unnamedplus
 
 " ファイル関連設定
@@ -544,25 +565,3 @@ set runtimepath+='~/.config/nvim/ftplugin/csv.vim'
 set runtimepath+='~/.config/nvim/ftdetect/cloudformation.vim'
 " autocmd BufWritePost *template.y*ml silent !cfn-format -w % 2>/dev/null " 保存時にCloudFormationのFormatterを実行
 filetype plugin indent on
-
-" "WSL用の設定"
-" Linux DESKTOP-8MJMAB0 4.19.67-microsoft-standard #1 SMP Sun Aug 18 13:37:54 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
-if system('uname -a | grep microsoft') != ""
-  let g:clipboard = {
-        \   'name': 'wslClipboard',
-        \   'copy': {
-        \      '+': 'win32yank.exe -i',
-        \      '*': 'win32yank.exe -i',
-        \    },
-        \   'paste': {
-        \      '+': 'win32yank.exe -o',
-        \      '*': 'win32yank.exe -o',
-        \   },
-        \   'cache_enabled': 1,
-        \ }
-  " set t_Co=256
-  set t_ut=""
-  " colorscheme onedark
-  " highlight Normal ctermbg=NONE
-  " highlight nonText ctermbg=NONE
-endif
