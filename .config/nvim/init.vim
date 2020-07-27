@@ -520,6 +520,7 @@ set clipboard+=unnamedplus
 set confirm "終了時に未保存のファイルがある場合、警告する"
 set hidden "未保存のファイルがあっても別のファイルを開ける"
 set autoread "外部でファイルが変更されたら自動的にリロードする"
+au FocusGained * :checktime
 
 " keymappings
 " <leader>hでHistoryを表示する
