@@ -243,7 +243,8 @@ let g:ale_linters = {
     \ 'sass': ['stylelint'],
     \ 'javascript': ['eslint'],
     \ 'vue': ['eslint'],
-    \ 'jsx': ['stylelint', 'eslint']
+    \ 'jsx': ['stylelint', 'eslint'],
+    \ 'markdown': ['textlint']
     \ }
 let g:ale_lint_on_save = 1
 " ALE Fixers
