@@ -51,6 +51,10 @@ Plug 'xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 Plug 'joshdick/onedark.vim' " Dark Theme
 Plug 'itchyny/lightline.vim' " status line
 
+"devicons
+Plug 'ryanoasis/vim-devicons', { 'on': 'NERDTreeToggle' }
+
+
 " 空白の可視化
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -517,6 +521,8 @@ endif
 set clipboard+=unnamedplus
 
 " ファイル関連設定
+set encoding=utf-8
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 set confirm "終了時に未保存のファイルがある場合、警告する"
 set hidden "未保存のファイルがあっても別のファイルを開ける"
 set autoread "外部でファイルが変更されたら自動的にリロードする"
