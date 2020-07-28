@@ -159,6 +159,9 @@ Plug 'tpope/vim-obsession'
 " advanced yank history
 Plug 'svermeulen/vim-yoink'
 
+" highlight yank region
+Plug 'machakann/vim-highlightedyank'
+
 call plug#end()
 
 
@@ -447,6 +450,9 @@ let g:yoinkMoveCursorToEndOfPaste = 1
 " When set to 0, it will cycle back to the other end of the history so you can swap in the same direction forever.
 let g:yoinkSwapClampAtEnds = 1
 " 1週したかどうかが分かりづらいので0にするのは微妙
+
+" "vim-highlightedyank settings"
+let g:highlightedyank_highlight_duration = 300
 
 " "NeoVim関連の設定"
 
