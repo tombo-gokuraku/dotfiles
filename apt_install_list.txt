@@ -4,6 +4,7 @@ automake
 libclang-dev
 libtool
 libboost-all-dev
+exuberant-ctags
 
 python3-pip
 python3-venv

@@ -162,6 +162,9 @@ Plug 'svermeulen/vim-yoink'
 " highlight yank region
 Plug 'machakann/vim-highlightedyank'
 
+" ctags
+Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
+
 call plug#end()
 
 
@@ -453,6 +456,9 @@ let g:yoinkSwapClampAtEnds = 1
 
 " "vim-highlightedyank settings"
 let g:highlightedyank_highlight_duration = 300
+
+" "tagbar settings"
+nmap <leader>t :TagbarToggle<CR>
 
 " "NeoVim関連の設定"
 
