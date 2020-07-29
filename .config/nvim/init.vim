@@ -419,6 +419,9 @@ augroup sourcesession
   autocmd VimEnter * nested
   \ if !argc() && empty(v:this_session) && filereadable('Session.vim') |
   \   source Session.vim |
+  \ endif |
+  \ if filereadable("Session.vim") |
+  \   Obsess |
   \ endif
 augroup END
 map <leader>os :Obsess<CR>
