@@ -1,7 +1,34 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json",
+    "cpp",
+    "html",
+    "css",
+    "javascript",
+    "javascriptreact",
+    "jsx",
+    "typescript",
+    "typescriptreact",
+    "tsx",
+    "vue",
+    "python",
+    "markdown"
+  ],
   "diagnostic.enable": false,
-  "python.linting.enabled": false,
-  "python.jediPath": "~/Env/python_env/nvim_env/lib/python3.7/site-packages/",
+  "yank.highlight.duration": 400,
+  "translator.toLang": "ja",
+  "translator.engines": ["google"],
+  "json.format.enable": true,
+  "markdown.config": {
+    "default": true,
+    "line_length": false
+  },
+  //"python.jediPath": "~/Env/python_env/nvim_env/lib/python3.7/site-packages/",
+  "python.analysis.diagnosticEnabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
   "styled-components.tags": [
     "styled",
     "css",
@@ -17,20 +44,6 @@
     "javascript": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)|(?:\\btw\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])",
     "javascriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)|(?:\\btw\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])"
   },
-  "json.format.enable": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "json",
-    "cpp",
-    "html",
-    "css",
-    "javascript",
-    "javascriptreact",
-    "jsx",
-    "typescript",
-    "typescriptreact",
-    "tsx",
-    "vue"
-  ],
   "clangd.semanticHighlighting": true,
   "eslint.filetypes": [
     "javascript",
@@ -41,8 +54,5 @@
     "tsx",
     "vue"
   ],
-  "eslint.autoFixOnSave": true,
-  "yank.highlight.duration": 400,
-  "translator.toLang": "ja",
-  "translator.engines": ["google"]
+  "eslint.autoFixOnSave": true
 }
