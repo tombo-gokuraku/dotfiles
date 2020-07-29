@@ -21,21 +21,25 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "json",
     "cpp",
+    "html",
+    "css",
+    "javascript",
+    "javascriptreact",
+    "jsx",
     "typescript",
     "typescriptreact",
     "tsx",
-    "javascript",
-    "javascriptreact",
-    "jsx"
+    "vue"
   ],
   "clangd.semanticHighlighting": true,
   "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "jsx",
     "typescript",
     "typescriptreact",
     "tsx",
-    "javascript",
-    "javascriptreact",
-    "jsx"
+    "vue"
   ],
   "eslint.autoFixOnSave": true
 }
