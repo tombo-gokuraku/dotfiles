@@ -20,7 +20,22 @@
   "json.format.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "json",
-    "cpp"
+    "cpp",
+    "typescript",
+    "typescriptreact",
+    "tsx",
+    "javascript",
+    "javascriptreact",
+    "jsx"
   ],
-  "clangd.semanticHighlighting": true
+  "clangd.semanticHighlighting": true,
+  "eslint.filetypes": [
+    "typescript",
+    "typescriptreact",
+    "tsx",
+    "javascript",
+    "javascriptreact",
+    "jsx"
+  ],
+  "eslint.autoFixOnSave": true
 }

@@ -255,7 +255,6 @@ let g:ale_fixers = {
   \   'css': ['stylelint'],
   \   'scss': ['stylelint'],
   \   'sass': ['stylelint'],
-  \   'javascript': ['prettier', 'eslint'],
   \   'vue': ['prettier','eslint'],
   \ }
 let g:ale_fix_on_save = 1
@@ -282,6 +281,8 @@ let g:coc_global_extensions = [
     \, 'coc-tsserver'
     \, 'coc-styled-components'
     \, 'coc-tailwindcss'
+    \, 'coc-eslint'
+    \, 'coc-prettier'
     \, 'coc-python'
     \, 'coc-snippets'
     \, 'coc-vetur'
