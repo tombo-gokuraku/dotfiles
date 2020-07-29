@@ -271,6 +271,7 @@ let g:coc_global_extensions = [
     \  'coc-lists'
     \, 'coc-yank'
     \, 'coc-word'
+    \, 'coc-translator'
     \, 'coc-emoji'
     \, 'coc-json'
     \, 'coc-yaml'
@@ -329,6 +330,10 @@ let g:markdown_fenced_languages = [
       \ 'vim',
       \ 'help'
       \]
+
+" coc-translator settings
+nmap <Leader>ct <Plug>(coc-translator-p)
+vmap <Leader>ct <Plug>(coc-translator-pv)
 
 " "asyncomplete settings"
 set completeopt+=preview "preview windowを表示する"

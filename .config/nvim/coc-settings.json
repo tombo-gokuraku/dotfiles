@@ -42,5 +42,7 @@
     "vue"
   ],
   "eslint.autoFixOnSave": true,
-  "yank.highlight.duration": 400
+  "yank.highlight.duration": 400,
+  "translator.toLang": "ja",
+  "translator.engines": ["google"]
 }
