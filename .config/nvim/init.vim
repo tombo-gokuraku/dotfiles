@@ -265,7 +265,8 @@ let g:ale_fix_on_save = 1
 let g:UltiSnipsExpandTrigger='<c-j>'
 
 " "emmet-vim settings"
-let g:user_emmet_leader_key='<C-E>' " emmet-vimのリーダーキーがCtrl+zになるはずだけどならない → vimの再起動が必要、reloadだけでは反映されない
+" set emmet leader key
+let g:user_emmet_leader_key='<C-E>'
 
 " "coc.nvim settings"
 " インストールする拡張機能
