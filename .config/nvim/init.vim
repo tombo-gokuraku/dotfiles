@@ -265,6 +265,7 @@ let g:coc_global_extensions = [
     \, 'coc-word'
     \, 'coc-translator'
     \, 'coc-emoji'
+    \, 'coc-markdown'
     \, 'coc-json'
     \, 'coc-yaml'
     \, 'coc-marketplace'
