@@ -287,18 +287,8 @@ let g:coc_global_extensions = [
     \, 'coc-vetur'
     \, 'coc-cmake'
     \, 'coc-clangd'
+    \, 'coc-vimlsp'
     \ ]
-" tab で補完候補選択 C-nのほうが好きなのでそのままにする
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
 " Enterで補完候補を決定する
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " ジャンプの設定
@@ -333,6 +323,12 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " coc-yank settings
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+" coc-vimlsp settings
+let g:markdown_fenced_languages = [
+      \ 'vim',
+      \ 'help'
+      \]
 
 " "asyncomplete settings"
 set completeopt+=preview "preview windowを表示する"
