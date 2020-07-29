@@ -159,8 +159,6 @@ Plug 'tpope/vim-obsession'
 " advanced yank history
 Plug 'svermeulen/vim-yoink'
 
-" highlight yank region
-Plug 'machakann/vim-highlightedyank'
 
 " ctags
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
@@ -271,6 +269,7 @@ let g:user_emmet_leader_key='<C-E>'
 " インストールする拡張機能
 let g:coc_global_extensions = [
     \  'coc-lists'
+    \, 'coc-yank'
     \, 'coc-word'
     \, 'coc-emoji'
     \, 'coc-json'
@@ -331,6 +330,9 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" coc-yank settings
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 " "asyncomplete settings"
 set completeopt+=preview "preview windowを表示する"
@@ -455,9 +457,6 @@ let g:yoinkMoveCursorToEndOfPaste = 1
 " When set to 0, it will cycle back to the other end of the history so you can swap in the same direction forever.
 let g:yoinkSwapClampAtEnds = 1
 " 1週したかどうかが分かりづらいので0にするのは微妙
-
-" "vim-highlightedyank settings"
-let g:highlightedyank_highlight_duration = 300
 
 " "tagbar settings"
 nmap <leader>t :TagbarToggle<CR>

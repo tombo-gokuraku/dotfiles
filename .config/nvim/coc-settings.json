@@ -41,5 +41,6 @@
     "tsx",
     "vue"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "yank.highlight.duration": 400
 }
