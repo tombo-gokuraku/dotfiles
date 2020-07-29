@@ -231,29 +231,21 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ALE Linters
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_python_flake8_options = '--max-line-length 88'
-let g:ale_linter_aliases = {'jsx': ['css', 'javascript']} " jsx用のエイリアス
 let g:ale_linters = {
-    \ 'python': ['flake8'],
     \ 'html': ['htmlhint'],
     \ 'css': ['stylelint'],
     \ 'scss': ['stylelint'],
     \ 'sass': ['stylelint'],
-    \ 'javascript': ['eslint'],
-    \ 'vue': ['eslint'],
-    \ 'jsx': ['stylelint', 'eslint'],
     \ 'markdown': ['textlint']
     \ }
 let g:ale_lint_on_save = 1
 " ALE Fixers
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-  \   'python': ['black'],
   \   'html': ['prettier'],
   \   'css': ['stylelint'],
   \   'scss': ['stylelint'],
   \   'sass': ['stylelint'],
-  \   'vue': ['prettier','eslint'],
   \ }
 let g:ale_fix_on_save = 1
 
