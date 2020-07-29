@@ -16,10 +16,10 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" init.vimを編集したら自動でinit.vimをリロードして、PlugInstallする
+" init.vimを編集したら自動でinit.vimをリロードする
 augroup reload_initvim
     au!
-    au BufWritePost init.vim so $MYVIMRC | call LightlineReload() | silent PlugInstall
+    au BufWritePost init.vim so $MYVIMRC | call LightlineReload()
 augroup end
 
 " init.vimをReloadするとLightlineが消えてしまうので、Lightlineをリロードする
@@ -306,7 +306,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Uでドキュメントの表示
-" なぜかホバー表示にならない
 nnoremap <silent> U :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -335,7 +334,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 set completeopt+=preview "preview windowを表示する"
 
 " "semantic-highlight settings"
-" :nnoremap <leader><ESC> :SemanticHighlightToggle<cr>
+" nnoremap <leader><ESC> :SemanticHighlightToggle<cr>
 
 " "javascript-libraries-syntax settings"
 let g:used_javascript_libs = 'react,vue'
