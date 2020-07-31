@@ -414,15 +414,15 @@ map <leader>mp :MarkdownPreview<CR>
 " "tpope/vim-obsession settings"
 " https://gist.github.com/robmiller/5135652
 " Autoload sessions created by tpope's vim-obsession when starting Vim.
-" 引数なしで`nvim`のように起動した時、Session.vimがあればsourceし、Obsessionを起動する
-" `nvim -S`のように起動した時、Session.vimがあれば、Obsessionを起動する
+" 引数なしで`nvim`のように起動した時、Session.vimがあればsourceする
+" Obsessionが起動しておらず、Session.vimがあれば、Obsessionを起動する
 augroup sourcesession
   autocmd!
   autocmd VimEnter * nested
-  \ if !argc() && empty(v:this_session) && filereadable('Session.vim') |
-  \   source Session.vim |
-  \   Obsess |
-  \ elseif !empty(v:this_session) && filereadable('Session.vim') |
+  \ if empty(v:this_session) && filereadable('Session.vim') |
+  \     source Session.vim |
+  \ endif |
+  \ if !exists('g:this_obsession') && filereadable('Session.vim') |
   \   Obsess |
   \ endif
 augroup END
