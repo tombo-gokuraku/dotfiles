@@ -251,7 +251,7 @@ let g:ale_fix_on_save = 1
 
 
 " "ultisnips settings"
-" let g:UltiSnipsExpandTrigger='<c-j>'
+let g:UltiSnipsExpandTrigger='<c-j>'
 
 " "emmet-vim settings"
 " set emmet leader key
