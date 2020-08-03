@@ -41,4 +41,7 @@ copyq
 obs-studio
 
 clamav
+clamav-daemon
+clamtk
+libclamunrar9
 gufw
