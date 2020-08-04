@@ -2,7 +2,7 @@
 
 ## Install
 
-リポジトリをホームにクローンする
+リポジトリをホームにクローンする。
 
 ```bash
 cd
@@ -10,13 +10,13 @@ git clone https://github.com/tombo-gokuraku/dotfiles
 cd dotfiles
 ```
 
-install.sh を実行する
+install.sh を実行する。
 
 ```bash
 ./install.sh
 ```
 
-link.sh を実行する
+link.sh を実行する。
 
 ```bash
 ./link.sh
@@ -129,7 +129,7 @@ Searches are case insensitive.<br/>
 - `prefix + ctrl-f` - simple *f*ile search
 - `prefix + ctrl-g` - jumping over *g*it status files (best used after `git status` command)
 - `prefix + alt-h` - jumping over SHA-1/SHA-256 hashes (best used after `git log` command)
-- `prefix + ctrl-u` - *u*rl search (http, ftp and git urls)
+- `prefix + ctrl-u` - *u*rl search (http, ftp and Git urls)
 - `prefix + ctrl-d` - number search (mnemonic d, as digit)
 - `prefix + alt-i` - *i*p address search
 
@@ -156,7 +156,7 @@ Copying a highlighted match will take you "out" of copycat mode. Paste with
   - リンクする dotfiles を settings ディレクトリ内に格納
   - install 用のスクリプトと install するパッケージのリストのテキストを scripts ディレクトリ内に格納
 - link.sh を settings ディレクトリ内の dotfiles に向ける
-- settings ファイル内のファイルを探索して、自動的にリンクするように link.sh を書き直す
+- settings ファイル内のファイルを探索して、自動的にリンクする link.sh を書く
 - log を自動で作成するようにする
 - error が発生した場所だけハイライトして表示する
 - ~~最新版の Node.js をインストールするスクリプト(nvm を使うことにした)~~

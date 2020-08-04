@@ -232,7 +232,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ALE Linters
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {
-    \ 'html': ['htmlhint'],
+    \ 'html': ['htmlhint', 'textlint'],
     \ 'css': ['stylelint'],
     \ 'scss': ['stylelint'],
     \ 'sass': ['stylelint'],
@@ -246,6 +246,7 @@ let g:ale_fixers = {
   \   'css': ['stylelint'],
   \   'scss': ['stylelint'],
   \   'sass': ['stylelint'],
+  \   'markdown': ['textlint'],
   \ }
 let g:ale_fix_on_save = 1
 

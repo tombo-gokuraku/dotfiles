@@ -10,3 +10,4 @@ nodemon
 npm-check-updates
 lighthouse
 textlint
+textlint-rule-preset-ja-technical-writing
