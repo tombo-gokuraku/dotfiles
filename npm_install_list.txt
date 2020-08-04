@@ -6,6 +6,7 @@ htmlhint
 stylelint
 stylelint-config-standard
 browser-sync
+nodemon
 npm-check-updates
 lighthouse
 textlint
