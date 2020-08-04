@@ -155,7 +155,7 @@ Copying a highlighted match will take you "out" of copycat mode. Paste with
 - 階層整理
   - リンクする dotfiles を settings ディレクトリ内に格納
   - install 用のスクリプトと install するパッケージのリストのテキストを scripts ディレクトリ内に格納
-- link.sh を settings ディレクトリ内の dotfiles に向ける
+  - link.sh を settings ディレクトリ内の dotfiles に向ける
 - settings ファイル内のファイルを探索して、自動的にリンクする link.sh を書く
 - log を自動で作成するようにする
 - error が発生した場所だけハイライトして表示する
