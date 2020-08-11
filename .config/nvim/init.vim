@@ -420,10 +420,10 @@ map <leader>mp :MarkdownPreview<CR>
 augroup sourcesession
   autocmd!
   autocmd VimEnter * nested
-  \ if empty(v:this_session) && filereadable('Session.vim') |
+  \ if !argc() && empty(v:this_session) && filereadable('Session.vim') |
   \     source Session.vim |
   \ endif |
-  \ if !exists('g:this_obsession') && filereadable('Session.vim') |
+  \ if !empty(v:this_session) && !exists('g:this_obsession') && filereadable('Session.vim') |
   \   Obsess |
   \ endif
 augroup END
