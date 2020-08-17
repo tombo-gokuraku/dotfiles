@@ -3,7 +3,6 @@ alias python=python3
 alias i=nvim
 alias aptupg='sudo apt update && apt list --upgradable && sudo apt upgrade -y && sudo apt autoremove -y'
 alias lg=lazygit
-alias fd=fdfind
 alias e=exa
 alias ea='exa -a'
 alias ee='exa -aal'
