@@ -2,3 +2,5 @@ exa
 ripgrep
 bat
 fd-find
+bottom
+tealdeer
