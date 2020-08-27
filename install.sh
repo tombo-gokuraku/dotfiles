@@ -21,6 +21,8 @@ sudo snap connect gotop-cjbassi:system-observe
 
 # install rustup & cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y #disable prompt
+# install build dependencies
+sudo apt install libssl-dev
 # install cargo applications
 cat ./cargo_install_list.txt  | xargs $HOME/.cargo/bin/cargo install -j4 #初回インストール時はログアウトするまで`cargo`のパスが通らないので、直接指定する
 
