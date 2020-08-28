@@ -549,7 +549,7 @@ nnoremap <ESC><ESC> :set hlsearch!<CR>
 " <leader>wで保存
 nnoremap <leader>w :w<CR>
 " <leader>rでvimrcをリロード
-nnoremap <leader>r :so $MYVIMRC<CR>
+nnoremap <leader>r :so $MYVIMRC <bar> :redraw<CR>
 " 移動
 " 行移動
 nnoremap j gj
