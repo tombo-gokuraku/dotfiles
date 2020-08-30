@@ -3,11 +3,11 @@ alias python=python3
 alias i=nvim
 alias aptupg='sudo apt update && apt list --upgradable && sudo apt upgrade -y && sudo apt autoremove -y'
 alias lg=lazygit
-alias e=exa
-alias ea='exa -a'
-alias ee='exa -aal'
-alias et='exa -T -L 3 -a -I "node_modules|.git|.cache"'
-alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always | less -r' #color=alwaysにすることでlessにexaの出力結果を色付きで渡せる
+alias e='exa --icons'
+alias ea='exa -a --icons'
+alias ee='exa -aal --icons'
+alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r' #color=alwaysにすることでlessにexaの出力結果を色付きで渡せる
 alias tm=tmux
 alias tma='tmux attach'
 alias bs='browser-sync start --server --files "*, ./**/*.css, ./**/*.js"'
