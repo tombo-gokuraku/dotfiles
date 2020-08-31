@@ -12,3 +12,4 @@ cfn-lint
 pysnooper
 pandas
 pprint
+tmuxp
