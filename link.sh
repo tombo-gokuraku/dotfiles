@@ -15,3 +15,4 @@ ln -snfv ~/dotfiles/.hyper.js ~/.hyper.js
 ln -snfv ~/dotfiles/.stylelintrc ~/.stylelintrc
 ln -snfv ~/dotfiles/.textlintrc ~/.textlintrc
 ln -snfv ~/dotfiles/.textlintrc.json ~/.textlintrc.json
+ln -snfv ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
