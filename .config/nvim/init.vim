@@ -91,7 +91,7 @@ Plug 'maximbaz/lightline-ale'
 " Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 
 " 入力補完
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'on': []}
 " Plug 'prabirshrestha/asyncomplete.vim'
 " Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
@@ -165,6 +165,13 @@ Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 
 call plug#end()
 
+" lazy load
+augroup load_us_insert
+    autocmd!
+    autocmd InsertEnter * call plug#load(
+                \ 'coc.nvim',
+                \ )| autocmd! load_us_insert
+augroup END
 
 " Pythonパスの設定
 let g:python_host_prog  = $HOME . '/Env/python_env/nvim_env/bin/python'
