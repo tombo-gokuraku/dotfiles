@@ -33,10 +33,6 @@ pip3 install --user -r pip_install_list.txt
 
 # install snap applications
 cat ./snap_install_list.txt  | xargs sudo snap install
-## snap connect for gotop-cjbassi
-sudo snap connect gotop-cjbassi:hardware-observe
-sudo snap connect gotop-cjbassi:mount-observe
-sudo snap connect gotop-cjbassi:system-observe
 
 # install rustup & cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y #disable prompt

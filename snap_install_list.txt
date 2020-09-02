@@ -1,2 +1,0 @@
-cfn-format
-gotop-cjbassi
