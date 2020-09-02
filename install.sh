@@ -7,7 +7,7 @@ bash ./install_apt.sh
 bash ./install_pip.sh
 
 # install snap applications
-cat ./snap_install_list.txt  | xargs sudo snap install
+bash ./install_snap.sh
 
 # install rustup & cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y #disable prompt
