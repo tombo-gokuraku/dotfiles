@@ -1,4 +1,13 @@
 #!/bin/bash
+
+# check alacritty installation
+if [[  $(command -v alacritty)  ]]; then
+  echo "alacritty is already installed"
+  exit
+else
+  echo "alacritty is not installed"
+fi
+
 pushd .
 
 # make applications directory
