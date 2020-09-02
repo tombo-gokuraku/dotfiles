@@ -20,3 +20,6 @@ bash ./create_nvim_env.sh
 
 # install font
 bash ./install_font.sh
+
+# link dotfiles
+bash ./link.sh
