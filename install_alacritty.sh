@@ -18,6 +18,15 @@ cd ~/Apps
 git clone https://github.com/alacritty/alacritty.git
 cd alacritty
 
+# check rustup & cargo installation
+if [[  $(command -v rustup)  ]] && [[ $(command -v cargo) ]]; then
+  echo "rustup & cargo are already installed"
+else
+  echo "rustup & cargo aren't installed"
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y #disable prompt
+fi
+
+
 # update rustup
 rustup override set stable
 rustup update stable
