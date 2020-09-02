@@ -13,4 +13,6 @@ fi
 # download fonts and update cache
 if [ ! -f "$FONT_DIRECTORY/$FONT_NAME" ] ; then
   cd $FONT_DIRECTORY && echo $(pwd) && curl -fLo "$FONT_NAME" $FONT_URL && cd - && fc-cache
+else
+  echo "$FONT_NAME is already installed"
 fi

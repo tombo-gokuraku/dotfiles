@@ -17,3 +17,6 @@ bash ./install_npm.sh
 
 # create nvim_env
 bash ./create_nvim_env.sh
+
+# install font
+bash ./install_font.sh
