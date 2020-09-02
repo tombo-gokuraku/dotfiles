@@ -1,9 +1,10 @@
 #!/bin/bash
 
+# Install apt packages
 bash ./install_apt.sh
 
 # install pip applications
-pip3 install --user -r pip_install_list.txt
+bash ./install_pip.sh
 
 # install snap applications
 cat ./snap_install_list.txt  | xargs sudo snap install
