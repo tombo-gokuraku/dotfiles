@@ -9,12 +9,8 @@ bash ./install_pip.sh
 # install snap applications
 bash ./install_snap.sh
 
-# install rustup & cargo
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y #disable prompt
-# install build dependencies
-sudo apt install libssl-dev
 # install cargo applications
-cat ./cargo_install_list.txt  | xargs $HOME/.cargo/bin/cargo install -j4 #初回インストール時はログアウトするまで`cargo`のパスが通らないので、直接指定する
+bash ./install_cargo.sh
 
 # install nvm & Node.js & npm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
