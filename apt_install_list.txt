@@ -39,6 +39,7 @@ vlc
 flameshot
 copyq
 obs-studio
+kazm
 
 clamav
 clamav-daemon
