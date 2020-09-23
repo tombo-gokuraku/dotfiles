@@ -39,7 +39,7 @@ cargo build --release
 # terminfo check
 infocmp alacritty
 
-if [ $? = 0 ]; then
+if [ $? == 0 ]; then
   echo "terminfo installed successfully"
 else
   echo "faile to install terminfo"
