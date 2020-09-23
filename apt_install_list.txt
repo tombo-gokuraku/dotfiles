@@ -20,6 +20,7 @@ lazygit
 
 neovim
 tmux
+fonts-powerline
 
 silversearcher-ag
 sysstat

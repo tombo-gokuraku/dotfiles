@@ -21,5 +21,8 @@ bash ./create_nvim_env.sh
 # install font
 bash ./install_font.sh
 
+# install powerline
+bash ./install_powerline.sh
+
 # link dotfiles
 bash ./link.sh

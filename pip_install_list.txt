@@ -13,3 +13,4 @@ pysnooper
 pandas
 pprint
 tmuxp
+powerline-status
