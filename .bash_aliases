@@ -19,6 +19,10 @@ if [[ $(command -v exa) ]]; then
   alias lta=eta
 fi
 
+if [[ $(command -v bat) ]]; then
+  alias cat=bat
+fi
+
 alias tm=tmux
 alias tma='tmux attach'
 alias bs='browser-sync start --server --files "*, ./**/*.css, ./**/*.js"'
