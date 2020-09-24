@@ -1,7 +1,9 @@
 #!/bin/bash
 # Run install_apt.sh and install_pip.sh before run this script.
 
-POWERLINE_BASH_PATH="~/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh"
+# get powerline install path
+PYTHON_SITE_PACKAGES_PATH=$(python3 -m site --user-site | sed "s/\/home\/$(whoami)/\~/")
+POWERLINE_BASH_PATH="$PYTHON_SITE_PACKAGES_PATH/powerline/bindings/bash/powerline.sh"
 
 grep $POWERLINE_BASH_PATH ~/.bashrc
 
