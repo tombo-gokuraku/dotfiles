@@ -224,7 +224,8 @@ nnoremap <leader>f :FZF<CR>
 " <leader>gfでGFilesを起動
 nnoremap <leader>gf :GFiles<CR>
 
-
+" "vim-rooter settings"
+let g:rooter_patterns = ['package.json', ".eslintrc.*", ".env.*"]
 
 " "ALE Settings"
 " jsxのためのファイルタイプを追加
