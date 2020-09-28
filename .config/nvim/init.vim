@@ -225,7 +225,7 @@ nnoremap <leader>f :FZF<CR>
 nnoremap <leader>gf :GFiles<CR>
 
 " "vim-rooter settings"
-let g:rooter_patterns = ['package.json', ".eslintrc.*", ".env.*"]
+let g:rooter_patterns = ['package.json', ".eslintrc.*", ".env.*", ".git"]
 
 " "ALE Settings"
 " jsxのためのファイルタイプを追加
