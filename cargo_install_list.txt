@@ -4,3 +4,4 @@ bat
 fd-find
 bottom
 tealdeer
+starship
