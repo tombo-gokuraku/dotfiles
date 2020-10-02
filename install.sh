@@ -24,8 +24,5 @@ bash ./install_font.sh
 # install powerline
 bash ./install_powerline.sh
 
-# install starship
-bash ./install_starship.sh
-
 # link dotfiles
 bash ./link.sh

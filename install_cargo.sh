@@ -18,3 +18,6 @@ cat ./cargo_install_list.txt  | xargs $HOME/.cargo/bin/cargo install -j4 #初回
 
 # install alacritty
 bash ./install_alacritty.sh
+
+# install starship
+bash ./install_starship.sh
