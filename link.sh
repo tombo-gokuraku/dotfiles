@@ -17,3 +17,4 @@ ln -snfv ~/dotfiles/.textlintrc ~/.textlintrc
 ln -snfv ~/dotfiles/.textlintrc.json ~/.textlintrc.json
 ln -snfv ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -snfv ~/dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -snfv ~/dotfiles/.config/git/ignore ~/.config/git/ignore
