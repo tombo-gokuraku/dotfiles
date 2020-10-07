@@ -1,8 +1,5 @@
 neovim
-eslint
-prettier
 htmlhint
-stylelint
 browser-sync
 nodemon
 npm-check-updates
