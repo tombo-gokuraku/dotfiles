@@ -47,3 +47,8 @@ alias nrs='npm run serve'
 alias yad='yarn develop'
 alias yab='yarn build'
 alias yas='yarn start'
+
+# create directory and file at once
+mkt(){
+  mkdir -p "$(dirname "$1")" && touch "$1" ;
+}
