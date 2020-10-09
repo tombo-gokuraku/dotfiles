@@ -285,7 +285,6 @@ let g:coc_global_extensions = [
     \, 'coc-styled-components'
     \, 'coc-tailwindcss'
     \, 'coc-eslint'
-    \, 'coc-prettier'
     \, 'coc-python'
     \, 'coc-snippets'
     \, 'coc-vetur'
