@@ -54,5 +54,11 @@
     "tsx",
     "vue"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
 }
