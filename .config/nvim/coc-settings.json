@@ -17,7 +17,9 @@
   "diagnostic.enable": false,
   "yank.highlight.duration": 400,
   "translator.toLang": "ja",
-  "translator.engines": ["google"],
+  "translator.engines": [
+    "google"
+  ],
   "json.format.enable": true,
   "markdown.config": {
     "default": true,
@@ -45,6 +47,8 @@
     //"javascriptreact": "(?:\\bclassName\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])|(?:\\btw\\s*`([_a-zA-Z0-9\\s\\-\\:\\/]*)`)|(?:\\btw\\s*=\\s*[\\\"\\']([_a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\'])"
   },
   "clangd.semanticHighlighting": true,
+  // eslint settings
+  "eslint.enable": true,
   "eslint.filetypes": [
     "javascript",
     "javascriptreact",
