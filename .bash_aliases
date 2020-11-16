@@ -25,11 +25,14 @@ fi
 
 alias tm=tmux
 alias tma='tmux attach'
-alias bs='browser-sync start --server --files "*, ./**/*.css, ./**/*.js"'
+
+# git command aliases
 alias gia='git add'
 alias gic='git commit -m'
 alias gip='git push'
 alias gib='git branch'
+
+# tar command aliases
 alias tarx='tar -xvf'
 alias tarc='tar -cvf'
 alias tarbz2x='tar -jxvf'
@@ -38,16 +41,23 @@ alias tarxzx='tar -Jxvf'
 alias tarxzc='tar -Jcvf'
 alias targzx='tar -zxvf'
 alias targzc='tar -zcvf'
+
+# ROS command aliases
 alias cm='catkin_make'
-alias sc='source ~/catkin_ws/devel/setup.bash'
+alias cs='source ~/catkin_ws/devel/setup.bash'
+
+# C++ project aliases
 alias cppmon='nodemon -w "../" -x "make -j8" -e "hpp,cpp"'
 alias cpptest='nodemon -w "../" -x "make -j8 && make test" -e "hpp,cpp" -q --spawn'
+
+# Node command aliases
 alias nrd='npm run develop'
 alias nrb='npm run build'
 alias nrs='npm run serve'
 alias yad='yarn develop'
 alias yab='yarn build'
 alias yas='yarn start'
+alias bs='browser-sync start --server --files "*, ./**/*.css, ./**/*.js"'
 
 # create directory and file at once
 mkt(){
